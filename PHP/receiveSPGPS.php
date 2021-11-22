@@ -16,20 +16,6 @@
         $sql = "SELECT ID, Наименование, Юр_Наименование, Район, DayOfTheWeek, ИНН, Учет, Адрес,
         Контакты, CurrState, Latitude, Longitude, addressLoadByPass
         FROM salespartners WHERE Адрес NOT LIKE '' AND CurrState=1";
-        // if ($result = mysqli_query($dbconnect, $sql)) {
-        //    $resultArray = array();
-        //    $tempArray = array();
-        //    while($row = $result->fetch_object()) {
-        //       $tempArray = $row;
-        //       array_push($resultArray, $tempArray);
-        //    }
-        //    echo json_encode($resultArray, JSON_UNESCAPED_UNICODE);
-        //    mysqli_close($dbconnect);
-        // } else {
-        //    $json['error'] = 'Something went wrong';
-        //    echo json_encode($json, JSON_UNESCAPED_UNICODE);
-        //    mysqli_close($dbconnect);
-        // }
       } else {
         $sql = "SELECT ID, Наименование, Юр_Наименование, Район, DayOfTheWeek, ИНН, Учет, Адрес,
         Контакты, CurrState, Latitude, Longitude, addressLoadByPass
@@ -42,20 +28,6 @@
         $sql = "SELECT ID, Наименование, Юр_Наименование, Район, DayOfTheWeek, ИНН, Учет, Адрес, Контакты,
         CurrState, Latitude, Longitude, addressLoadByPass
         FROM salespartners WHERE Район=0 AND Адрес NOT LIKE '' ";
-        // if ($result = mysqli_query($dbconnect, $sql)) {
-        //    $resultArray = array();
-        //    $tempArray = array();
-        //    while($row = $result->fetch_object()) {
-        //       $tempArray = $row;
-        //       array_push($resultArray, $tempArray);
-        //    }
-        //    echo json_encode($resultArray, JSON_UNESCAPED_UNICODE);
-        //    mysqli_close($dbconnect);
-        // } else {
-        //    $json['error'] = 'Something went wrong';
-        //    echo json_encode($json, JSON_UNESCAPED_UNICODE);
-        //    mysqli_close($dbconnect);
-        // }
       } else {
         $sql = "SELECT ID, Наименование, Юр_Наименование, Район, DayOfTheWeek, ИНН, Учет, Адрес, Контакты,
         CurrState, Latitude, Longitude, addressLoadByPass

@@ -24,18 +24,6 @@
    $dateTimeDoc = date("Y-m-d H:i:s", $time); // Выводим время пользователя, согласно его часовому поясу
    $resultArray = array();
    $tempArray = array();
-   // $sql = "SELECT Фамилия, Имя, Отчество FROM агент WHERE Район LIKE '$author' ";
-   // if ($result = mysqli_query($dbconnect, $sql)) {
-   //   while($row = mysqli_fetch_array($result)) {
-   //     if (mysqli_num_rows($result) != 0) {
-   //       $secondName = $row['Фамилия'];
-   //       $firstName = $row['Имя'];
-   //       $middleName = $row['Отчество'];
-   //     }
-   //   }
-   //   $author = $secondName + " " + $firstName + " " + $middleName;
-   // }
-
     for ($i = 0; $i < count($new_array); $i++) {
       $paymentAmount = $new_array[$i]['payment'];
       $invoiceNumber = $new_array[$i]['invoiceNumber'];

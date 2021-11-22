@@ -27,7 +27,6 @@
     include("dbconnect.php");
     $login = (trim($_POST['login']));
     $password = (trim($_POST['password']));
-    // mysql_real_escape_string
     if (isset($_POST['area']) === true && empty($_POST['area']) === false &&
         isset($_POST['root']) === false && empty($_POST['root']) === true) {
       $area = trim($_POST['area']);

@@ -32,13 +32,6 @@
                if ($result = mysqli_query($dbconnect, $sql)){
                   $resultArray = array();
                   $tempArray = array();
-               //    while($row = $result->fetch_object()){
-               //       $tempArray = $row;
-               //       array_push($resultArray, $tempArray);
-               //    }
-               //    echo json_encode($resultArray, JSON_UNESCAPED_UNICODE);
-               //    mysqli_close($dbconnect);
-               // }
                  while($row = mysqli_fetch_array($result)) {
                    if (mysqli_num_rows($result) != 0) {
                      $attribute = $row['Район'];
@@ -54,14 +47,6 @@
               echo json_encode($resultArray, JSON_UNESCAPED_UNICODE);
               mysqli_close($dbconnect);
             }
-               // else {
-               //       $json["failed"] = 'Login failed. Invalid login
-               //       and/or password';
-               //       echo json_encode($json, JSON_UNESCAPED_UNICODE);
-               //       mysqli_close($dbconnect);
-               // }
-            // }
-
             if ($agentAttribute == "accountant"){
               $sql = "SELECT * FROM security WHERE login LIKE '$login' AND password LIKE '$password' ";
               if ($result = mysqli_query($dbconnect, $sql)){
@@ -82,13 +67,6 @@
               echo json_encode($resultArray, JSON_UNESCAPED_UNICODE);
               mysqli_close($dbconnect);
             }
-            // else {
-            //       $json["failed"] = 'Login failed. Invalid login
-            //       and/or password';
-            //       echo json_encode($json, JSON_UNESCAPED_UNICODE);
-            //       mysqli_close($dbconnect);
-            // }
-
             if ($agentAttribute == "ceo"){
               $sql = "SELECT * FROM security WHERE login LIKE '$login' AND password LIKE '$password' ";
               if ($result = mysqli_query($dbconnect, $sql)){
@@ -109,12 +87,6 @@
               echo json_encode($resultArray, JSON_UNESCAPED_UNICODE);
               mysqli_close($dbconnect);
             }
-            // else {
-            //       $json["failed"] = 'Login failed. Invalid login
-            //       and/or password';
-            //       echo json_encode($json, JSON_UNESCAPED_UNICODE);
-            //       mysqli_close($dbconnect);
-            // }
          } else {
             echo json_encode("Почему-то пустой Логин и/или Пароль");
          }

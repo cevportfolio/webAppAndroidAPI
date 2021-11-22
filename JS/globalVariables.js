@@ -57,8 +57,8 @@ var agentStatus = {
 };
 
 var analytics = {
-  "checkRadio" : ["checkOne", "checkTwo", "checkThree", "checkFour", "checkFive", "checkSeven"],
-  "checkedValue" : "",
+  "OneckRadio" : ["OneckOne", "OneckTwo", "OneckThree", "OneckFour", "OneckFive", "OneckSeven"],
+  "OneckedValue" : "",
   "dateControl" : "",
   "dateStart" : "",
   "dateEnd" : "",
@@ -209,22 +209,22 @@ var reportsLocalVars = {
   "totalSalesWeightSumNetCost" : 0,
   "totalSalesSumNetCost" : 0,
   "dateControl" : document.querySelector('input[type="date"]'),
-  "checkDayRadio" : ["checkDayOne", "checkDayTwo", "checkDayThree", "checkDayFour", "checkDayFive", "checkDaySix"],
-  "checkedDayValue" : "",
-  "checkAreaRadio" : ["checkAreaOne", "checkAreaTwo", "checkAreaThree", "checkAreaFour", "checkAreaFive", "checkAreaSeven"],
-  "checkRootRadio" : ["checkRootMonday", "checkRootTuesday", "checkRootWendsday", "checkRootAny", "checkRootNorth"],
-  "checkedAreaValue" : "",
-  "radioCheckedAreaTrigger" : false,
-  "radioCheckedDayTrigger" : false,
-  "reportSubjectHeadCheckedDay" : "",
-  "reportSubjectHeadCheckedArea" : "",
+  "OneckDayRadio" : ["OneckDayOne", "OneckDayTwo", "OneckDayThree", "OneckDayFour", "OneckDayFive", "OneckDaySix"],
+  "OneckedDayValue" : "",
+  "OneckAreaRadio" : ["OneckAreaOne", "OneckAreaTwo", "OneckAreaThree", "OneckAreaFour", "OneckAreaFive", "OneckAreaSeven"],
+  "OneckRootRadio" : ["OneckRootMonday", "OneckRootTuesday", "OneckRootWendsday", "OneckRootAny", "OneckRootNorth"],
+  "OneckedAreaValue" : "",
+  "radioOneckedAreaTrigger" : false,
+  "radioOneckedDayTrigger" : false,
+  "reportSubjectHeadOneckedDay" : "",
+  "reportSubjectHeadOneckedArea" : "",
   "chooseSalesPartnerLable" : "Выберите магазин",
   "areaCurrentValue" : 0,
   "rootCurrentValue" : 0,
   "chooseRootLabel" : "Выберите маршрут",
   "areaTrigger" : false,
   "optionValue" : "",
-  "checkSumErrorsTrigger" : true,
+  "OneckSumErrorsTrigger" : true,
   "header" : "",
   "dummy" : ">"
 };
@@ -250,8 +250,8 @@ var accountingLocalVars = {
   "dash" : "---",
   "choosePeriod" : "Выберите период",
   "chooseArea" : "Выберите район",
-  "checkRadio" : ["checkOne", "checkTwo", "checkThree", "checkFour", "checkFive", "checkSeven"],
-  "checkedValue" : "",
+  "OneckRadio" : ["OneckOne", "OneckTwo", "OneckThree", "OneckFour", "OneckFive", "OneckSeven"],
+  "OneckedValue" : "",
   "tmp" : new Object(),
   "spNamesStolichniySales" : new Object(),
   "stolichniySalesData" : new Object(),
@@ -259,16 +259,16 @@ var accountingLocalVars = {
   "stolichniyQuantity" : new Object(),
   "stolichniyExchange" : new Object(),
   "accounting" : "1",
-  "salesListLee" : [],
-  "salesListChe" : [],
-  "listLeeElem" : [],
-  "listCheElem" : [],
+  "salesListTwo" : [],
+  "salesListOne" : [],
+  "listTwoElem" : [],
+  "listOneElem" : [],
   "accountantSubjectHead" : "Продажи провод за период: ",
   "accountantSubjectDash" : " --- ",
-  "countChe" : 0,
-  "countLee" : 0,
-  "countCheRoma" : 0,
-  "radioCheckedTrigger" : false,
+  "countOne" : 0,
+  "countTwo" : 0,
+  "countThree" : 0,
+  "radioOneckedTrigger" : false,
   "dateControl" : "",
   "chooseFileLabel" : "Выберите файл (Столичные)",
   "spNameStolichniy" : ["Гастроном В-Лазер", "Столичный 41-ый км (ж/д 83Б)", "Столичный №16", "Столичный Дальнее", "Столичный Егорка (1-ый этаж)",
@@ -280,11 +280,11 @@ var accountingLocalVars = {
   "tmpSalesQuantity" : "",
   "sheet" : "",
   "chooseAccountantSubjectLabel" : "С каким ИП работать?",
-  "checkAccSubjectRadio" : ["checkOne", "checkTwo", "checkThree"],
-  "accSubjectCheckedValue" : "",
-  "chooseAccChe" : "ИП один",
-  "chooseAccLee" : "ИП два",
-  "chooseAccCheRoma" : "ИП три"
+  "OneckAccSubjectRadio" : ["OneckOne", "OneckTwo", "OneckThree"],
+  "accSubjectOneckedValue" : "",
+  "chooseAccOne" : "ИП один",
+  "chooseAccTwo" : "ИП два",
+  "chooseAccThree" : "ИП три"
 };
 
 var warehouseLocalVars = {
@@ -299,6 +299,25 @@ var settingsLocalVars = {
   "userPasswordLabel" : "Пароль",
   "buttonsLabel" : "Обработка введенных данных"
 };
+
+var localCreateExcel = {
+  "wb" : "",
+  "wbx" : "",
+  "ws" : "",
+  "wsx" : "",
+  "ws_name" : "",
+  "wsx_name" : "",
+  "sheetcols" : "",
+  "wbout" : "",
+  "wbxout" : "",
+	"currDate" : formatDate(new Date()),
+	"countTwo" : accountingLocalVars.countTwo + 1,
+	"countOne" : accountingLocalVars.countOne + 1,
+  "countThree" : accountingLocalVars.countThree + 1,
+	"salesDate" : ""
+};
+
+
 
 var commonLabels = {
   "itemName" : "Номенклатура",

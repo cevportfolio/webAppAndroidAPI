@@ -5,7 +5,6 @@
     include("dbconnect.php");
     $login = (trim($_POST['login']));
     $password = (trim($_POST['password']));
-    // mysql_real_escape_string
     if (isset($_POST['accounting']) === true && empty($_POST['accounting']) === false) {
       $accounting = trim($_POST['accounting']);
     }
@@ -36,11 +35,7 @@
     if ((int)$area == 7) {
       $index = (int)$area - 2;
     }
-    // if (isset($_POST['accSubject']) === true && empty($_POST['accSubject']) === false) {
       $accSubjectPost = trim($_POST['accSubject']);
-    // } else {
-    //   $accSubject = 1;
-    // }
     if ($accSubjectPost == 2) {
       $accSubject = "На Ли Ген Сун";
     }
@@ -60,12 +55,9 @@
     $currDate = strtotime($dateTimeDoc);
     $date = strtotime($dateTimeDoc);
     if ($accounting == "1") {
-      // $date = date('Y-m-d', $date);
     } else {
       $date = strtotime("-4 day", $date);
     }
-    // $dateTime = date('Y-m-d H:i:s', $date);
-    // $dateTime = "2019-06-10 00:00:00";
     if (empty($_POST['dateStart']) === false && empty($_POST['dateEnd']) === false) {
       $dateStart = (trim($_POST['dateStart']));
       $dateEnd = (trim($_POST['dateEnd']));
