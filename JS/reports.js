@@ -159,25 +159,25 @@ $('#report-sales-manager').on('click', function() {
           if (reportsLocalVars.tmp[i].Юр_Наименование.trim() != "ООО СКЦ" && reportsLocalVars.tmp[i].Юр_Наименование.trim() != "ООО Спецторг") {
             if (Object.keys(reportsLocalVars.salesQuantity).length > 0) {
               for (var key in reportsLocalVars.salesQuantity) {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
-                    if (key == "Ким-ча весовая") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                    reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
+                    if (key == "весовая") {
                       createObject(2, 1, i, 0);
                     }
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
-                    if (key == "Ким-ча весовая") {
+                  if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
+                    if (key == "весовая") {
                       createObject(3, 1, i, 0);
                     }
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                    if (key == "Редька по-восточному весовая") {
+                  if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                    if (key == "Редькавесовая") {
                       createObject(1, 1, i, 0);
                     }
                   }
@@ -188,20 +188,20 @@ $('#report-sales-manager').on('click', function() {
                 }
               }
               if (reportsLocalVars.trigger == false) {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                    reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                     createObject(2, 0, i, 0);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                  if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                     createObject(3, 0, i, 0);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                     createObject(1, 0, i, 0);
                   }
                 } else {
@@ -209,20 +209,20 @@ $('#report-sales-manager').on('click', function() {
                 }
               }
             } else {
-               if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                     reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+               if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                  reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                     reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                      createObject(2, 0, i, 0);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                  if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                      createObject(3, 0, i, 0);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                     reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                     reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                      createObject(1, 0, i, 0);
                   }
                } else {
@@ -234,25 +234,25 @@ $('#report-sales-manager').on('click', function() {
         if (reportsLocalVars.tmp[i].AgentID != 7) {
           if (Object.keys(reportsLocalVars.salesQuantity).length > 0) {
             for (var key in reportsLocalVars.salesQuantity) {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
-                  if (key == "Ким-ча весовая") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                  reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
+                  if (key == "весовая") {
                     createObject(2, 1, i, 0);
                   }
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
-                  if (key == "Ким-ча весовая") {
+                if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
+                  if (key == "весовая") {
                     createObject(3, 1, i, 0);
                   }
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (key == "Редька по-восточному весовая") {
+                if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (key == "Редькавесовая") {
                     createObject(1, 1, i, 0);
                   }
                 }
@@ -263,20 +263,20 @@ $('#report-sales-manager').on('click', function() {
               }
             }
             if (reportsLocalVars.trigger == false) {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                  reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                   createObject(2, 0, i, 0);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                   createObject(3, 0, i, 0);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                   createObject(1, 0, i, 0);
                 }
               } else {
@@ -284,20 +284,20 @@ $('#report-sales-manager').on('click', function() {
               }
             }
           } else {
-             if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                   reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+             if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                   reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                    createObject(2, 0, i, 0);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                    createObject(3, 0, i, 0);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                   reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                   reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                    createObject(1, 0, i, 0);
                 }
              } else {
@@ -332,25 +332,25 @@ $('#report-by-sp').on('click', function() {
           if (reportsLocalVars.tmp[i].Юр_Наименование.trim() != "ООО СКЦ" && reportsLocalVars.tmp[i].Юр_Наименование.trim() != "ООО Спецторг") {
             if (Object.keys(reportsLocalVars.salesQuantity).length > 0) {
               for (var key in reportsLocalVars.salesQuantity) {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
-                    if (key == "Ким-ча весовая") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                    reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
+                    if (key == "весовая") {
                       createObject(2, 1, i, 0);
                     }
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
-                    if (key == "Ким-ча весовая") {
+                  if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
+                    if (key == "весовая") {
                       createObject(3, 1, i, 0);
                     }
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                    if (key == "Редька по-восточному весовая") {
+                  if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                    if (key == "Редькавесовая") {
                       createObject(1, 1, i, 0);
                     }
                   }
@@ -361,20 +361,20 @@ $('#report-by-sp').on('click', function() {
                 }
               }
               if (reportsLocalVars.trigger == false) {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                    reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                     createObject(2, 0, i, 0);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                  if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                     createObject(3, 0, i, 0);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                     createObject(1, 0, i, 0);
                   }
                 } else {
@@ -382,20 +382,20 @@ $('#report-by-sp').on('click', function() {
                 }
               }
             } else {
-               if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                     reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+               if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                  reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                     reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                      createObject(2, 0, i, 0);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                  if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                      createObject(3, 0, i, 0);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                     reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                     reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                      createObject(1, 0, i, 0);
                   }
                } else {
@@ -406,25 +406,25 @@ $('#report-by-sp').on('click', function() {
         } else {
           if (Object.keys(reportsLocalVars.salesQuantity).length > 0) {
             for (var key in reportsLocalVars.salesQuantity) {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
-                  if (key == "Ким-ча весовая") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                  reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
+                  if (key == "весовая") {
                     createObject(2, 1, i, 0);
                   }
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
-                  if (key == "Ким-ча весовая") {
+                if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
+                  if (key == "весовая") {
                     createObject(3, 1, i, 0);
                   }
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (key == "Редька по-восточному весовая") {
+                if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (key == "Редькавесовая") {
                     createObject(1, 1, i, 0);
                   }
                 }
@@ -435,20 +435,20 @@ $('#report-by-sp').on('click', function() {
               }
             }
             if (reportsLocalVars.trigger == false) {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                  reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                   createObject(2, 0, i, 0);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                   createObject(3, 0, i, 0);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                   createObject(1, 0, i, 0);
                 }
               } else {
@@ -456,20 +456,20 @@ $('#report-by-sp').on('click', function() {
               }
             }
           } else {
-             if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                   reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+             if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                   reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                    createObject(2, 0, i, 0);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                    createObject(3, 0, i, 0);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                   reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                   reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                    createObject(1, 0, i, 0);
                 }
              } else {
@@ -575,25 +575,25 @@ $('#report-by-netcost').on('click', function() {
           if (reportsLocalVars.tmp[i].Юр_Наименование.trim() != "ООО СКЦ" && reportsLocalVars.tmp[i].Юр_Наименование.trim() != "ООО Спецторг") {
             if (Object.keys(reportsLocalVars.salesQuantity).length > 0) {
               for (var key in reportsLocalVars.salesQuantity) {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
-                    if (key == "Ким-ча весовая" + " " + reportsLocalVars.tmp[i].netCost) {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                    reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
+                    if (key == "весовая" + " " + reportsLocalVars.tmp[i].netCost) {
                       createObject(2, 1, i, 3);
                     }
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
-                    if (key == "Ким-ча весовая" + " " + reportsLocalVars.tmp[i].netCost) {
+                  if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
+                    if (key == "весовая" + " " + reportsLocalVars.tmp[i].netCost) {
                       createObject(3, 1, i, 3);
                     }
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                    if (key == "Редька по-восточному весовая" + " " + reportsLocalVars.tmp[i].netCost) {
+                  if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                    if (key == "Редькавесовая" + " " + reportsLocalVars.tmp[i].netCost) {
                       createObject(1, 1, i, 3);
                     }
                   }
@@ -604,20 +604,20 @@ $('#report-by-netcost').on('click', function() {
                 }
               }
               if (reportsLocalVars.trigger == false) {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                    reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                     createObject(2, 0, i, 3);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                  if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                     createObject(3, 0, i, 3);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                      reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                      reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                     createObject(1, 0, i, 3);
                   }
                 } else {
@@ -625,20 +625,20 @@ $('#report-by-netcost').on('click', function() {
                 }
               }
             } else {
-               if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                     reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+               if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                  reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                     reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                      createObject(2, 0, i, 3);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                  if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                      createObject(3, 0, i, 3);
                   }
-                  if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                     reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                  if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                     reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                      createObject(1, 0, i, 3);
                   }
                } else {
@@ -649,25 +649,25 @@ $('#report-by-netcost').on('click', function() {
         } else {
           if (Object.keys(reportsLocalVars.salesQuantity).length > 0) {
             for (var key in reportsLocalVars.salesQuantity) {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
-                  if (key == "Ким-ча весовая" + " " + reportsLocalVars.tmp[i].netCost) {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                  reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
+                  if (key == "весовая" + " " + reportsLocalVars.tmp[i].netCost) {
                     createObject(2, 1, i, 3);
                   }
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
-                  if (key == "Ким-ча весовая" + " " + reportsLocalVars.tmp[i].netCost) {
+                if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
+                  if (key == "весовая" + " " + reportsLocalVars.tmp[i].netCost) {
                     createObject(3, 1, i, 3);
                   }
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                  if (key == "Редька по-восточному весовая" + " " + reportsLocalVars.tmp[i].netCost) {
+                if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                  if (key == "Редькавесовая" + " " + reportsLocalVars.tmp[i].netCost) {
                     createObject(1, 1, i, 3);
                   }
                 }
@@ -678,20 +678,20 @@ $('#report-by-netcost').on('click', function() {
               }
             }
             if (reportsLocalVars.trigger == false) {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                  reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                   createObject(2, 0, i, 3);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                   createObject(3, 0, i, 3);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                    reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                    reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                   createObject(1, 0, i, 3);
                 }
               } else {
@@ -699,20 +699,20 @@ $('#report-by-netcost').on('click', function() {
               }
             }
           } else {
-             if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                   reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+             if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                   reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                    createObject(2, 0, i, 3);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+                if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                    createObject(3, 0, i, 3);
                 }
-                if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                   reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+                if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                   reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                    createObject(1, 0, i, 3);
                 }
              } else {
@@ -783,25 +783,25 @@ this.recieveReportDataPost = function() {
       if (reportsLocalVars.tmp[i].AgentID != 7) {
         if (Object.keys(reportsLocalVars.salesQuantity).length > 0) {
           for (var key in reportsLocalVars.salesQuantity) {
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
-                if (key == "Ким-ча весовая") {
+            if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
+                if (key == "весовая") {
                   createObject(2, 1, i, 0);
                 }
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
-                if (key == "Ким-ча весовая") {
+              if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
+                if (key == "весовая") {
                   createObject(3, 1, i, 0);
                 }
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (key == "Редька по-восточному весовая") {
+              if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (key == "Редькавесовая") {
                   createObject(1, 1, i, 0);
                 }
               }
@@ -812,20 +812,20 @@ this.recieveReportDataPost = function() {
             }
           }
           if (reportsLocalVars.trigger == false) {
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+            if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                 createObject(2, 0, i, 0);
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+              if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                 createObject(3, 0, i, 0);
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                 createObject(1, 0, i, 0);
               }
             } else {
@@ -833,20 +833,20 @@ this.recieveReportDataPost = function() {
             }
           }
         } else {
-           if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-              reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-              reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-              reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-              reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                 reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+           if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+              reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+              reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+              reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+              reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                 reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                  createObject(2, 0, i, 0);
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+              if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                  createObject(3, 0, i, 0);
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                 reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                 reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                  createObject(1, 0, i, 0);
               }
            } else {
@@ -908,25 +908,25 @@ this.salesManagerCalc = function() {
       if (reportsLocalVars.tmp[i].Юр_Наименование.trim() != "ООО СКЦ" && reportsLocalVars.tmp[i].Юр_Наименование.trim() != "ООО Спецторг") {
         if (Object.keys(reportsLocalVars.salesQuantity).length > 0) {
           for (var key in reportsLocalVars.salesQuantity) {
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
-                if (key == "Ким-ча весовая") {
+            if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
+                if (key == "весовая") {
                   createObject(2, 1, i, 0);
                 }
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
-                if (key == "Ким-ча весовая") {
+              if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
+                if (key == "весовая") {
                   createObject(3, 1, i, 0);
                 }
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-                if (key == "Редька по-восточному весовая") {
+              if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+                if (key == "Редькавесовая") {
                   createObject(1, 1, i, 0);
                 }
               }
@@ -937,20 +937,20 @@ this.salesManagerCalc = function() {
             }
           }
           if (reportsLocalVars.trigger == false) {
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+            if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+                reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                 createObject(2, 0, i, 0);
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+              if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                 createObject(3, 0, i, 0);
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                  reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                  reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                 createObject(1, 0, i, 0);
               }
             } else {
@@ -958,20 +958,20 @@ this.salesManagerCalc = function() {
             }
           }
         } else {
-           if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-              reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-              reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-              reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-              reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                 reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+           if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+              reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+              reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+              reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+              reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                 reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                  createObject(2, 0, i, 0);
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+              if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                  createObject(3, 0, i, 0);
               }
-              if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                 reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+              if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                 reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                  createObject(1, 0, i, 0);
               }
            } else {
@@ -983,25 +983,25 @@ this.salesManagerCalc = function() {
     if (reportsLocalVars.tmp[i].AgentID != 7) {
       if (Object.keys(reportsLocalVars.salesQuantity).length > 0) {
         for (var key in reportsLocalVars.salesQuantity) {
-          if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-              reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-              reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-              reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-              reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
-              if (key == "Ким-ча весовая") {
+          if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+              reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+              reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+              reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+              reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+            if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
+              if (key == "весовая") {
                 createObject(2, 1, i, 0);
               }
             }
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
-              if (key == "Ким-ча весовая") {
+            if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
+              if (key == "весовая") {
                 createObject(3, 1, i, 0);
               }
             }
-            if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-              if (key == "Редька по-восточному весовая") {
+            if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+              if (key == "Редькавесовая") {
                 createObject(1, 1, i, 0);
               }
             }
@@ -1012,20 +1012,20 @@ this.salesManagerCalc = function() {
           }
         }
         if (reportsLocalVars.trigger == false) {
-          if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-              reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-              reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-              reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-              reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+          if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+              reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+              reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+              reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+              reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+            if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
               createObject(2, 0, i, 0);
             }
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+            if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
               createObject(3, 0, i, 0);
             }
-            if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-                reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+            if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+                reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
               createObject(1, 0, i, 0);
             }
           } else {
@@ -1033,20 +1033,20 @@ this.salesManagerCalc = function() {
           }
         }
       } else {
-         if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-            reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2" ||
-            reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр" ||
-            reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-            reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 1" ||
-               reportsLocalVars.tmp[i].Наименование == "Ким-ча 700 гр особая цена 2") {
+         if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+            reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2" ||
+            reportsLocalVars.tmp[i].Наименование == "500 гр" ||
+            reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+            reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
+            if (reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 1" ||
+               reportsLocalVars.tmp[i].Наименование == "700 гр особая цена 2") {
                createObject(2, 0, i, 0);
             }
-            if (reportsLocalVars.tmp[i].Наименование == "Ким-ча 500 гр") {
+            if (reportsLocalVars.tmp[i].Наименование == "500 гр") {
                createObject(3, 0, i, 0);
             }
-            if (reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-               reportsLocalVars.tmp[i].Наименование == "Редька по-восточному 500гр особая цена 2") {
+            if (reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 1" ||
+               reportsLocalVars.tmp[i].Наименование == "Редька500гр особая цена 2") {
                createObject(1, 0, i, 0);
             }
          } else {
@@ -1187,15 +1187,15 @@ this.createIngredientsObject = function(paramOne, paramTwo, paramThree) {
 }
 
 this.createObject = function(paramOne, paramTwo, paramThree, paramFour) {
-  if (reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча 700 гр особая цена 1" ||
-      reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча 700 гр особая цена 2" ||
-      reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча 500 гр" ||
-      reportsLocalVars.tmp[paramThree].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-      reportsLocalVars.tmp[paramThree].Наименование == "Редька по-восточному 500гр особая цена 2" ||
-      reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча весовая" ||
-      reportsLocalVars.tmp[paramThree].Наименование == "Редька по-восточному весовая") {
-    if (reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча 700 гр особая цена 1" ||
-        reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча 700 гр особая цена 2") {
+  if (reportsLocalVars.tmp[paramThree].Наименование == "700 гр особая цена 1" ||
+      reportsLocalVars.tmp[paramThree].Наименование == "700 гр особая цена 2" ||
+      reportsLocalVars.tmp[paramThree].Наименование == "500 гр" ||
+      reportsLocalVars.tmp[paramThree].Наименование == "Редька500гр особая цена 1" ||
+      reportsLocalVars.tmp[paramThree].Наименование == "Редька500гр особая цена 2" ||
+      reportsLocalVars.tmp[paramThree].Наименование == "весовая" ||
+      reportsLocalVars.tmp[paramThree].Наименование == "Редькавесовая") {
+    if (reportsLocalVars.tmp[paramThree].Наименование == "700 гр особая цена 1" ||
+        reportsLocalVars.tmp[paramThree].Наименование == "700 гр особая цена 2") {
       reportsLocalVars.totalExchangeWeight += parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity * 0.7);
       reportsLocalVars.totalExchangeWeightSum += parseFloat(reportsLocalVars.tmp[paramThree].Price) * parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity);
       reportsLocalVars.totalExchangeWeightSumNetCost += parseFloat(reportsLocalVars.tmp[paramThree].netCost) * parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity * 0.7);
@@ -1214,7 +1214,7 @@ this.createObject = function(paramOne, paramTwo, paramThree, paramFour) {
       reportsLocalVars.totalSalesWeightSumNetCost += parseFloat(reportsLocalVars.tmp[paramThree].netCost) * parseFloat(reportsLocalVars.tmp[paramThree].Quantity * 0.7);
       reportsLocalVars.totalSalesSumNetCost += parseFloat(reportsLocalVars.tmp[paramThree].netCost) * parseFloat(reportsLocalVars.tmp[paramThree].Quantity * 0.7);
     }
-    if (reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча 500 гр") {
+    if (reportsLocalVars.tmp[paramThree].Наименование == "500 гр") {
       reportsLocalVars.totalExchangeWeight += parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity * 0.5);
       reportsLocalVars.totalExchangeWeightSum += parseFloat(reportsLocalVars.tmp[paramThree].Price) * parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity);
       reportsLocalVars.totalExchangeWeightSumNetCost += parseFloat(reportsLocalVars.tmp[paramThree].netCost) * parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity * 0.5);
@@ -1233,8 +1233,8 @@ this.createObject = function(paramOne, paramTwo, paramThree, paramFour) {
       reportsLocalVars.totalSalesWeightSumNetCost += parseFloat(reportsLocalVars.tmp[paramThree].netCost) * parseFloat(reportsLocalVars.tmp[paramThree].Quantity * 0.5);
       reportsLocalVars.totalSalesSumNetCost += parseFloat(reportsLocalVars.tmp[paramThree].netCost) * parseFloat(reportsLocalVars.tmp[paramThree].Quantity * 0.5);
     }
-    if (reportsLocalVars.tmp[paramThree].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-        reportsLocalVars.tmp[paramThree].Наименование == "Редька по-восточному 500гр особая цена 2") {
+    if (reportsLocalVars.tmp[paramThree].Наименование == "Редька500гр особая цена 1" ||
+        reportsLocalVars.tmp[paramThree].Наименование == "Редька500гр особая цена 2") {
           reportsLocalVars.totalExchangeWeight += parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity * 0.5);
           reportsLocalVars.totalExchangeWeightSum += parseFloat(reportsLocalVars.tmp[paramThree].Price) * parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity);
           reportsLocalVars.totalExchangeWeightSumNetCost += parseFloat(reportsLocalVars.tmp[paramThree].netCost) * parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity * 0.5);
@@ -1254,8 +1254,8 @@ this.createObject = function(paramOne, paramTwo, paramThree, paramFour) {
           reportsLocalVars.totalSalesSumNetCost += parseFloat(reportsLocalVars.tmp[paramThree].netCost) * parseFloat(reportsLocalVars.tmp[paramThree].Quantity * 0.5);
 
     }
-    if (reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча весовая" ||
-        reportsLocalVars.tmp[paramThree].Наименование == "Редька по-восточному весовая") {
+    if (reportsLocalVars.tmp[paramThree].Наименование == "весовая" ||
+        reportsLocalVars.tmp[paramThree].Наименование == "Редькавесовая") {
           reportsLocalVars.totalExchangeWeight += parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity);
           reportsLocalVars.totalExchangeWeightSum += parseFloat(reportsLocalVars.tmp[paramThree].Price) * parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity);
           reportsLocalVars.totalExchangeWeightSumNetCost += parseFloat(reportsLocalVars.tmp[paramThree].netCost) * parseFloat(reportsLocalVars.tmp[paramThree].ExchangeQuantity);
@@ -1316,22 +1316,22 @@ this.createObject = function(paramOne, paramTwo, paramThree, paramFour) {
     reportsLocalVars.tmpSalary = reportsLocalVars.tmpNetQuantity * parseFloat(reportsLocalVars.agentSalaryRatesList[reportsLocalVars.tmpName]);
     reportsLocalVars.tmpExchangeSalaryLoss = reportsLocalVars.tmpExchange * parseFloat(reportsLocalVars.agentSalaryRatesList[reportsLocalVars.tmpName]);
     if (paramFour === 1) {
-      if (reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча 700 гр особая цена 1" ||
-          reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча 700 гр особая цена 2") {
+      if (reportsLocalVars.tmp[paramThree].Наименование == "700 гр особая цена 1" ||
+          reportsLocalVars.tmp[paramThree].Наименование == "700 гр особая цена 2") {
         reportsLocalVars.tmpTotalNetCost = parseFloat(reportsLocalVars.tmpQuantity * 0.7) * reportsLocalVars.tmp[paramThree].netCost;
       }
-      if (reportsLocalVars.tmp[paramThree].Наименование == "Ким-ча 500 гр") {
+      if (reportsLocalVars.tmp[paramThree].Наименование == "500 гр") {
         reportsLocalVars.tmpTotalNetCost = parseFloat(reportsLocalVars.tmpQuantity * 0.5) * reportsLocalVars.tmp[paramThree].netCost;
       }
-      if (reportsLocalVars.tmp[paramThree].Наименование == "Редька по-восточному 500гр особая цена 1" ||
-          reportsLocalVars.tmp[paramThree].Наименование == "Редька по-восточному 500гр особая цена 2") {
+      if (reportsLocalVars.tmp[paramThree].Наименование == "Редька500гр особая цена 1" ||
+          reportsLocalVars.tmp[paramThree].Наименование == "Редька500гр особая цена 2") {
         reportsLocalVars.tmpTotalNetCost = parseFloat(reportsLocalVars.tmpQuantity * 0.5) * reportsLocalVars.tmp[paramThree].netCost;
       }
     }
   }
   if (paramOne == 1) {
 
-    reportsLocalVars.tmpName = "Редька по-восточному весовая";
+    reportsLocalVars.tmpName = "Редькавесовая";
     reportsLocalVars.tmpTotal = reportsLocalVars.tmp[paramThree].Total;
     reportsLocalVars.tmpQuantity = reportsLocalVars.tmp[paramThree].Quantity * 0.5;
     reportsLocalVars.tmpExchange = reportsLocalVars.tmp[paramThree].ExchangeQuantity * 0.5;
@@ -1341,12 +1341,12 @@ this.createObject = function(paramOne, paramTwo, paramThree, paramFour) {
     reportsLocalVars.tmpSalary = reportsLocalVars.tmpNetQuantity * parseFloat(reportsLocalVars.agentSalaryRatesList[reportsLocalVars.tmpName]);
     reportsLocalVars.tmpExchangeSalaryLoss = reportsLocalVars.tmpExchange * parseFloat(reportsLocalVars.agentSalaryRatesList[reportsLocalVars.tmpName]);
     if (paramFour == 3) {
-      reportsLocalVars.tmpName = "Редька по-восточному весовая" + " " + reportsLocalVars.tmp[paramThree].netCost;
+      reportsLocalVars.tmpName = "Редькавесовая" + " " + reportsLocalVars.tmp[paramThree].netCost;
     }
   }
   if (paramOne == 2) {
 
-    reportsLocalVars.tmpName = "Ким-ча весовая";
+    reportsLocalVars.tmpName = "весовая";
     reportsLocalVars.tmpTotal = reportsLocalVars.tmp[paramThree].Total;
     reportsLocalVars.tmpQuantity = reportsLocalVars.tmp[paramThree].Quantity * 0.7;
     reportsLocalVars.tmpExchange = reportsLocalVars.tmp[paramThree].ExchangeQuantity * 0.7;
@@ -1356,12 +1356,12 @@ this.createObject = function(paramOne, paramTwo, paramThree, paramFour) {
     reportsLocalVars.tmpSalary = reportsLocalVars.tmpNetQuantity * parseFloat(reportsLocalVars.agentSalaryRatesList[reportsLocalVars.tmpName]);
     reportsLocalVars.tmpExchangeSalaryLoss = reportsLocalVars.tmpExchange * parseFloat(reportsLocalVars.agentSalaryRatesList[reportsLocalVars.tmpName]);
     if (paramFour == 3) {
-      reportsLocalVars.tmpName = "Ким-ча весовая" + " " + reportsLocalVars.tmp[paramThree].netCost;
+      reportsLocalVars.tmpName = "весовая" + " " + reportsLocalVars.tmp[paramThree].netCost;
     }
   }
   if (paramOne == 3) {
 
-    reportsLocalVars.tmpName = "Ким-ча весовая";
+    reportsLocalVars.tmpName = "весовая";
     reportsLocalVars.tmpTotal = reportsLocalVars.tmp[paramThree].Total;
     reportsLocalVars.tmpQuantity = reportsLocalVars.tmp[paramThree].Quantity * 0.5;
     reportsLocalVars.tmpExchange = reportsLocalVars.tmp[paramThree].ExchangeQuantity * 0.5;
@@ -1371,7 +1371,7 @@ this.createObject = function(paramOne, paramTwo, paramThree, paramFour) {
     reportsLocalVars.tmpSalary = reportsLocalVars.tmpNetQuantity * parseFloat(reportsLocalVars.agentSalaryRatesList[reportsLocalVars.tmpName]);
     reportsLocalVars.tmpExchangeSalaryLoss = reportsLocalVars.tmpExchange * parseFloat(reportsLocalVars.agentSalaryRatesList[reportsLocalVars.tmpName]);
     if (paramFour == 3) {
-      reportsLocalVars.tmpName = "Ким-ча весовая" + " " + reportsLocalVars.tmp[paramThree].netCost;
+      reportsLocalVars.tmpName = "весовая" + " " + reportsLocalVars.tmp[paramThree].netCost;
     }
   }
   if (paramTwo == 0) {
@@ -1874,23 +1874,23 @@ this.renderReportTable = function(paramOne, paramTwo)	{
 
        reportsLocalVars.totalSalary += parseFloat(reportsLocalVars.salaryList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
 
-       if (Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча весовая" ||
-        Object.keys(reportsLocalVars.salesQuantity)[i] == "Редька по-восточному весовая" ||
-        Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча традиционная 500" ||
-        Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча традиционная 250" ||
-        Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча премиум 500" ||
-        Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча премиум 250" ||
-        Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча 450" ||
-        Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча 250" ||
+       if (Object.keys(reportsLocalVars.salesQuantity)[i] == "весовая" ||
+        Object.keys(reportsLocalVars.salesQuantity)[i] == "Редькавесовая" ||
+        Object.keys(reportsLocalVars.salesQuantity)[i] == "традиционная 500" ||
+        Object.keys(reportsLocalVars.salesQuantity)[i] == "традиционная 250" ||
+        Object.keys(reportsLocalVars.salesQuantity)[i] == "премиум 500" ||
+        Object.keys(reportsLocalVars.salesQuantity)[i] == "премиум 250" ||
+        Object.keys(reportsLocalVars.salesQuantity)[i] == "450" ||
+        Object.keys(reportsLocalVars.salesQuantity)[i] == "250" ||
         Object.keys(reportsLocalVars.salesQuantity)[i] == "Горчица") {
-          if (Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча весовая") {
+          if (Object.keys(reportsLocalVars.salesQuantity)[i] == "весовая") {
             reportsLocalVars.totalExchangeWeightLossSalary += parseFloat(reportsLocalVars.exchangeSalaryLossList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
             reportsLocalVars.totalReturnWeight += reportsLocalVars.salesReturn[Object.keys(reportsLocalVars.salesQuantity)[i]];
             reportsLocalVars.totalReturnWeightLossSalary += reportsLocalVars.salesReturn[Object.keys(reportsLocalVars.salesQuantity)[i]] * parseFloat(reportsLocalVars.agentSalaryRatesList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
             reportsLocalVars.totalNetWeight += parseFloat(reportsLocalVars.netQuantityList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
             reportsLocalVars.totalNetWeightSalary += parseFloat(reportsLocalVars.netQuantityList[Object.keys(reportsLocalVars.salesQuantity)[i]]) * parseFloat(reportsLocalVars.agentSalaryRatesList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
           }
-          if (Object.keys(reportsLocalVars.salesQuantity)[i] == "Редька по-восточному весовая") {
+          if (Object.keys(reportsLocalVars.salesQuantity)[i] == "Редькавесовая") {
             reportsLocalVars.totalExchangeWeightLossSalary += parseFloat(reportsLocalVars.exchangeSalaryLossList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
             reportsLocalVars.totalReturnWeight += reportsLocalVars.salesReturn[Object.keys(reportsLocalVars.salesQuantity)[i]];
             reportsLocalVars.totalReturnWeightLossSalary += reportsLocalVars.salesReturn[Object.keys(reportsLocalVars.salesQuantity)[i]] * parseFloat(reportsLocalVars.agentSalaryRatesList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
@@ -1904,18 +1904,18 @@ this.renderReportTable = function(paramOne, paramTwo)	{
             reportsLocalVars.totalNetQuantityMustard += reportsLocalVars.netQuantityList[Object.keys(reportsLocalVars.salesQuantity)[i]];
             reportsLocalVars.totalNetQuantityMustardSalary += reportsLocalVars.netQuantityList[Object.keys(reportsLocalVars.salesQuantity)[i]] * parseFloat(reportsLocalVars.agentSalaryRatesList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
           }
-          if (Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча традиционная 500" ||
-             Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча традиционная 250" ||
-             Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча премиум 500" ||
-             Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча премиум 250") {
+          if (Object.keys(reportsLocalVars.salesQuantity)[i] == "традиционная 500" ||
+             Object.keys(reportsLocalVars.salesQuantity)[i] == "традиционная 250" ||
+             Object.keys(reportsLocalVars.salesQuantity)[i] == "премиум 500" ||
+             Object.keys(reportsLocalVars.salesQuantity)[i] == "премиум 250") {
                reportsLocalVars.totalExchangeQuantityLossSalary += parseFloat(reportsLocalVars.exchangeSalaryLossList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
                reportsLocalVars.totalReturnQuantity += reportsLocalVars.salesReturn[Object.keys(reportsLocalVars.salesQuantity)[i]];
                reportsLocalVars.totalReturnQuantityLossSalary += reportsLocalVars.salesReturn[Object.keys(reportsLocalVars.salesQuantity)[i]] * parseFloat(reportsLocalVars.agentSalaryRatesList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
                reportsLocalVars.totalNetQuantitySpecial += reportsLocalVars.netQuantityList[Object.keys(reportsLocalVars.salesQuantity)[i]];
                reportsLocalVars.totalNetQuantitySpecialSalary += reportsLocalVars.netQuantityList[Object.keys(reportsLocalVars.salesQuantity)[i]] * parseFloat(reportsLocalVars.agentSalaryRatesList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
           }
-          if (Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча 450" ||
-             Object.keys(reportsLocalVars.salesQuantity)[i] == "Ким-ча 250") {
+          if (Object.keys(reportsLocalVars.salesQuantity)[i] == "450" ||
+             Object.keys(reportsLocalVars.salesQuantity)[i] == "250") {
                reportsLocalVars.totalExchangeQuantityLossSalary += parseFloat(reportsLocalVars.exchangeSalaryLossList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
                reportsLocalVars.totalReturnQuantity += reportsLocalVars.salesReturn[Object.keys(reportsLocalVars.salesQuantity)[i]];
                reportsLocalVars.totalReturnQuantityLossSalary += reportsLocalVars.salesReturn[Object.keys(reportsLocalVars.salesQuantity)[i]] * parseFloat(reportsLocalVars.agentSalaryRatesList[Object.keys(reportsLocalVars.salesQuantity)[i]]);
