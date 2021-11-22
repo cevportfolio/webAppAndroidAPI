@@ -1127,7 +1127,7 @@ this.createIngredientsObject = function(paramOne, paramTwo, paramThree) {
     reportsLocalVars.tmpMultipliedSumIngredients = reportsLocalVars.tmpMultipliedQuantityIngredients * parseFloat(reportsLocalVars.tmp2[paramThree].ingredientsPrice, 4);
   }
   if (paramOne == 1) {
-    reportsLocalVars.tmpSalesQuantity = parseFloat(reportsLocalVars.salesIngredientsQuantity["Янним"], 4);
+    reportsLocalVars.tmpSalesQuantity = parseFloat(reportsLocalVars.salesIngredientsQuantity["Янм"], 4);
     reportsLocalVars.tmpNameIngredients = reportsLocalVars.tmp3[paramThree].ingredientsName;
     reportsLocalVars.tmpMultipliedQuantityIngredients = parseFloat(reportsLocalVars.tmp3[paramThree].ingredientsQuantity, 4) * reportsLocalVars.tmpSalesQuantity;
     reportsLocalVars.tmpMultipliedSumIngredients = reportsLocalVars.tmpMultipliedQuantityIngredients * parseFloat(reportsLocalVars.tmp3[paramThree].ingredientsPrice, 4);

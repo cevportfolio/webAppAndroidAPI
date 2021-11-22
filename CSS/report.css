@@ -4,9 +4,7 @@
 #connection-data {
   width: 100vw;
   height: 100vh;
-  /* border: 2px solid green; */
   position: absolute;
-  /* top: 50px; */
   z-index: 1001;
 }
 #tableSummaryHeaderData {
@@ -27,7 +25,6 @@
   border: 1px solid red;
   width: 100%;
   max-width: 700px;
-  /* margin: 10px; */
 }
 #agentStatusContainer {
   top: 30vh;
@@ -68,12 +65,10 @@
 #tableSummaryData td:nth-child(5) { width: 15%; }
 
 .reportContainer #close {
-  /* border: solid 1px red; */
   position: relative;
   padding-bottom: 20px;
   padding-top: 10px;
   padding-right: 5px;
-  /* font: normal 18px Arial; */
   max-width: 595px;
   width: 95vw;
   margin: 0 auto;
@@ -94,11 +89,9 @@
   margin: 5px;
   width: 90%;
   z-index: 2000;
-  /* background-color: yellow; */
 }
 #dateStart, #dateEnd {
   width: 100%;
-  /* background-color: green; */
 }
 .reportContainer {
   top: 10vh;
@@ -108,7 +101,6 @@
   margin: 0 auto;
   height: 100vh;
   background-color: white;
-  /* border: 1px solid green; */
   z-index: 1002;
 }
 .reportMenuContainer {
@@ -118,7 +110,6 @@
   width: 100vw;
   margin: 0 auto;
   height: 100vh;
-  /* border: 1px solid yellow; */
   padding: 20px;
   z-index: 1002;
 }
@@ -131,18 +122,13 @@
   max-height: 90vh;
   min-height: 10vh;
 }
-#tableData {
-  /* overflow-y: hidden; */
-}
 .additional {
-  /* border: solid 2px red; */
   height: 150px;
 }
 .reportContainer #tableHeader td {
   border-right: 2px solid #999;
   font-weight: bold;
   text-align: center;
-  /* background-color: grey; */
 }
 .reportContainer #tableHeader td {padding: 5px;}
 .reportContainer #tableHeader td:nth-child(1) { width: 50px; }		/*№*/
@@ -152,8 +138,7 @@
 .reportContainer #tableHeader td:nth-child(5) { width: 50px; }		/*Total*/
 .reportContainer #tableHeader td:nth-child(6) { width: 50px; }		/*Return*/
 
-.tableData td
-{
+.tableData td {
   font: normal 14px Arial;
   color: black;
   padding: 5px;
@@ -190,18 +175,15 @@
   float: left;
   width: 40%;
   margin-top: 6px;
-  /* background-color: brown; */
 }
 .col-60 {
   float: left;
   width: 60%;
   margin-top: 6px;
-  /* background-color: red; */
 }
 .col-30 {
   float: left;
   width: 33.33%;
-  /* background-color: grey; */
 }
 .col-50 {
   float: left;

@@ -1,6 +1,5 @@
 * {
    box-sizing: border-box;
-   /* background-color: rgba(0, 0, 0, 0.611764705882353); */
 }
 body {
    font-family: Verdana, sans-serif;
@@ -8,30 +7,14 @@ body {
    background-color: rgb(246, 248, 245);
    overflow-x: hidden;
 }
-.container-fluid {
-   /* padding: 60px 50px; */
-   /* border: solid red 1px; */
-   /* background-color: white !important;
-   z-index: 9999; */
-}
 .bg-grey {
    background-color: red;
 }
 q {
    quotes: "\00ab" "\00bb	";
 }
-.row {
-   /* background-color: black;
-   border: solid red 1px; */
-   /* z-index: 9999; */
-}
-/* .drop-shadow.top{
-   box-shadow: 0 -4px 20px -2px rgba(0,0,0,0.4);
-} */
 .jumbotron {
-   /* font: 'Carter One'; */
    background-color: transparent;
-   /* margin-top: 40px; */
 }
 .slideanim {visibility:hidden;}
 .slide {
@@ -60,9 +43,4 @@ q {
       opacity: 1;
       -webkit-transform: translateY(0%);
    }
-}
-   /* .btn-lg {
-      width: 100%;
-      margin-bottom: 35px;
-   } */
 }

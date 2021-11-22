@@ -14,7 +14,6 @@
   margin: 5px;
   width: 90%;
   z-index: 2000;
-  /* background-color: yellow; */
 }
 
 .menuContainer {
@@ -24,7 +23,6 @@
    width: 100vw;
    margin: 0 auto;
    height: 100vh;
-   /* border: 1px solid yellow; */
    padding: 20px;
    z-index: 1002;
 }
@@ -38,8 +36,6 @@
   max-width: 880px;
   width: 100vw;
   margin: 0 auto;
-  /* height: 100%; */
-  /* border: 10px solid yellow; */
   padding: 10px;
   z-index: 1002;
 }
@@ -47,20 +43,14 @@
 .analyticsSubject {
   font: normal 18px Arial;
   margin-top: 10px;
-  /* border: solid 1px green; */
   position: relative;
 }
 
 .panel-body .radioContainer {
    float: left;
    position: relative;
-   /* max-width: 100px; */
    width: 33%;
    margin: 0 auto;
-   /* height: 100vh; */
-   /* background-color: grey; */
-   /* border: 1px solid yellow; */
-   /* padding: 20px; */
    z-index: 1002;
 }
 
@@ -69,12 +59,8 @@
 }
 
 #closeAnalytics {
-  /* border: solid 1px red; */
   position: relative;
   margin-bottom: 20px;
-  /* padding-top: 10px; */
-  /* padding-right: 5px; */
-  /* font: normal 18px Arial; */
   max-width: 845px;
   width: 95vw;
   height: 40px;
@@ -82,12 +68,10 @@
 }
 
 .container #tableContainer {
-  /* position: fixed; */
   width: 95vw;
   max-width: 880px;
   height: 95vh;
   overflow: auto;
-  /* border: 1px solid green; */
 }
 
 .analytics #tableDataAnalytics td,
@@ -118,11 +102,7 @@
 #tableContainer .tableDataAnalytics, .tableDataAnalyticsSummary{
    margin-top: 10px;
 }
-/* #tableContainer .tableDataLee {
-   margin-top: 10px;
-} */
 #saveAnalytics, #saveAnalyticsSummary, #saveAnalyticsExchange {
-  /* border: 2px solid green; */
   margin-top: 30px;
   margin-bottom: 10px;
   margin-left: 3px;
