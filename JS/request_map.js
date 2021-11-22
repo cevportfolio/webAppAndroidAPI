@@ -276,47 +276,24 @@ function onClickNoMyMapInit() {
 
   objectManager.clusters.events.add('balloonopen', function () {
     debugger;
-    // var clusterId = e.get('objectId');
     currentObject = objectManager.clusters.state.get('activeObject');
 
-    <!-- Нам нужен id объекта, чтобы получить данные балуна -->
+    // <!-- Нам нужен id объекта, чтобы получить данные балуна -->
     objectId = currentObject.id;
     getСheckUpdateStatus();
   });
 
-  <!-- пытаемся формировать содержимое балуна кластера -->
+  // <!-- пытаемся формировать содержимое балуна кластера -->
   objectManager.clusters.state.events.add('change', function () {
      var newCurrentObject = objectManager.clusters.state.get('activeObject');
      if (newCurrentObject && (!currentObject || (newCurrentObject.id != currentObject.id))) {
        currentObject = newCurrentObject;
-       <!-- Нам нужен id объекта, чтобы получить данные балуна -->
+      //  <!-- Нам нужен id объекта, чтобы получить данные балуна -->
        objectId = currentObject.id;
 
-       <!-- Нам нужен id кластера, чтобы знать чей балун менять -->
-       // clusterId = objectManager.getObjectState(currentObject.id).cluster.id;
-       // if (!hasBalloonData(objectId)) {
-       //   getBalloonData(objectId).done(function (data) {
-       //     var obj = objectManager.objects.getById(objectId);
-       //     obj.properties.balloonContent = data;
-       //     objectManager.clusters.balloon.open(clusterId);
-       //   });
-       // }
-
-        // && request_mapLocalVars.onClusterEventTrigger == true
+      //  <!-- Нам нужен id кластера, чтобы знать чей балун менять -->
        if (request_mapLocalVars.checkAddressUpdateTrigger == true) {
          alert(request_mapLocalVars.objGetSPID[objectId]);
-         // request_mapLocalVars.onObjectEventTrigger = false;
-         // position = coords.indexOf(',');
-         // request_mapLocalVars.objectNewLatitude = JSON.stringify(coords.slice(0, position));
-         // request_mapLocalVars.objectNewLongitude = JSON.stringify(coords.slice(position));
-         // position = request_mapLocalVars.objectNewLatitude.indexOf(']');
-         // request_mapLocalVars.objectNewLatitude = request_mapLocalVars.objectNewLatitude.slice(1, position);
-         // position = request_mapLocalVars.objectNewLongitude.indexOf(']');
-         // request_mapLocalVars.objectNewLongitude = request_mapLocalVars.objectNewLongitude.slice(1, position);
-         // let isConfirmed = confirm("Изменить координаты для магазина:  " + request_mapLocalVars.objectName);
-         // if (isConfirmed) {
-         //   updateSPCoords(request_mapLocalVars.spArea, request_mapLocalVars.objectNewLatitude, request_mapLocalVars.objectNewLongitude);
-         // }
        }
      }
   });

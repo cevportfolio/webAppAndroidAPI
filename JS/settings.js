@@ -1,12 +1,3 @@
-var settingsLocalVars = {
-  "nameLabel" : "Имя",
-  "userLabel" : "Пользователь",
-  "passLabel" : "Пароль",
-  "userAccountLabel" : "Учетная запись",
-  "userPasswordLabel" : "Пароль",
-  "buttonsLabel" : "Обработка введенных данных"
-};
-// var ok;
 $('#adminSettings').on('click', function() {
   toTop("connection-data");
   $('div#connection-data').html("");

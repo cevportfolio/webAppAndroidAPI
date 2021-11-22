@@ -291,6 +291,15 @@ var warehouseLocalVars = {
   "itemNameLabel" : "Номенклатура"
 };
 
+var settingsLocalVars = {
+  "nameLabel" : "Имя",
+  "userLabel" : "Пользователь",
+  "passLabel" : "Пароль",
+  "userAccountLabel" : "Учетная запись",
+  "userPasswordLabel" : "Пароль",
+  "buttonsLabel" : "Обработка введенных данных"
+};
+
 var commonLabels = {
   "itemName" : "Номенклатура",
   "itenmPrice" : "Цена",
