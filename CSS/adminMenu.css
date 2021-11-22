@@ -1,0 +1,135 @@
+.navigationContainer {
+  position: fixed;
+  /* max-width: 700px; */
+  width: 100vw;
+  /* margin: 0 auto; */
+  /* height: 100vh; */
+  background-color: darkgrey;
+  /* border: 1px solid yellow; */
+  /* padding: 20px; */
+  z-index: 1002;
+}
+#menu {
+  position: relative;
+  max-width: 950px;
+  width: 100vw;
+  margin: 0 auto;
+  /* height: 100vh; */
+  /* background-color: green; */
+  /* border: 4px solid yellow; */
+  /* padding: 20px; */
+  z-index: 1002;
+}
+.navbar-header {
+  position: relative;
+  max-width: 700px;
+  width: 100vw;
+  margin: 0 auto;
+  /* height: 100vh; */
+  /* background-color: grey; */
+  /* border: 1px solid green; */
+  /* padding: 20px; */
+  z-index: 1002;
+}
+.navbar-toggle {
+  float: left !important;
+  margin-left: 2px;
+}
+.navbar-nav li a {
+  color: black;
+}
+.navbar-nav li input {
+  background-color: transparent;
+  border: none;
+  font: normal 18px Arial;
+  padding: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.navbar-nav li img {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  height: 35px;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+   color: #f4511e !important;
+   background-color: #fff !important;
+ }
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+    background-color: black;
+}
+.navbar-toggle:hover {
+     background: white !important;
+     color: #F4511e !important;
+}
+.navbar-toggle:focus {
+     background: black !important;
+     color: #F4511e !important;
+}
+.navbar-toggle:hover .icon-bar {
+     background: #F4511e !important;
+}
+.navbar-toggle:focus .icon-bar {
+     background: #F4511e !important;
+}
+.navbar-toggle .icon-bar {
+     background: black;
+}
+.navbar-brand {
+   border: solid transparent;
+   width: 100px;
+}
+.container-fluid {
+   /* width: 1000px; */
+}
+.navbar-brand img {
+   /* border: solid black; */
+   margin-top: -20px;
+}
+/* change collapse breakpoint */
+/* @media (min-width: 940px) and (max-width: 1000px) {
+   .collapse {
+       display: none !important;
+   }
+} */
+
+/* force breakpoint early for collapse bootstrap 3*/
+@media (max-width: 940px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}

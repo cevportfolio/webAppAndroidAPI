@@ -1,0 +1,275 @@
+/* .item {
+			text-align:center;
+			float:left;
+			margin:5px;
+			position:relative;
+			border: solid green;
+		} */
+
+			/* .item,
+			.item-hover,
+			.item-hover .mask,
+			.item-img,
+			.item-info {
+				width: 300px;
+				height: 225px;
+			} */
+
+			/* .item-hover,
+			.item-hover .mask,
+			.item-img {
+				position:absolute;
+				top:0;
+				left:0;
+			} */
+
+			input[type='checkbox'] {
+				display: none;
+			}
+
+			#check_one,
+			#check_two,
+			#check_three,
+			#check_four,
+			#check_five,
+			#check_six,
+			#check_seven,
+			#check_eight,
+			#check_nine,
+			#check_ten,
+			#check_eleven,
+			#check_twelve,
+			#check_thirteen {
+				width: 100%;
+				height: 80%;
+				position: relative;
+				top:-500px;
+				/* padding-bottom: 10%; */
+				left:-1%;
+				right:1%;
+				z-index: 99;
+			}
+			.popup_one #check_one_additional {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				top:-500px;
+				/* padding-bottom: 10%; */
+				left:-1%;
+				right:1%;
+			}
+			.popup_one_additional #check_one_additional {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top:-2%;
+				bottom:0;
+				left:-1%;
+				right:1%;
+				z-index: 100;
+			}
+
+			.popup_one_parent,
+			/* .popup_one, */
+			.popup_two,
+			.popup_three,
+			.popup_four,
+			.popup_five,
+			.popup_six,
+			.popup_seven,
+			.popup_eight,
+			.popup_nine,
+			.popup_ten,
+			.popup_eleven,
+			.popup_twelve,
+			.popup_thirteen {
+				display: none;
+				width: 100%;
+				height: 100%;
+				color: white;
+				position: fixed;
+				text-align: center;
+				top: 10%;
+				padding-left:1%;
+				padding-right: 1%;
+				/* font-size: 1em; */
+				z-index: 99;
+			}
+
+			.popup_one {
+				width: 100%;
+				height: 100%;
+				color: white;
+				position: fixed;
+				text-align: center;
+				font-style: normal !important;
+				font-size: 14px !important;
+				z-index: 99;
+			}
+
+			.popup_one_additional {
+				display: none;
+				width: 100%;
+				height: 100%;
+				color: white;
+				position: absolute;
+				text-align: center;
+				/* top: 10%;
+				padding-left:2%;
+				padding-right: 2%; */
+				z-index: 99;
+			}
+
+			.popup_one h1,
+			.popup_one_additional h1,
+			.popup_two h1,
+			.popup_three h1,
+			.popup_four h1,
+			.popup_five h1,
+			.popup_six h1,
+			.popup_seven h1,
+			.popup_eight h1,
+			.popup_nine h1,
+			.popup_ten h1,
+			.popup_eleven h1,
+			.popup_twelve h1,
+			.popup_thirteen h1 {
+				display:table-cell;
+				vertical-align:middle;
+				position:relative;
+			}
+
+			.popup_one p,
+			.popup_one_additional p,
+			.popup_two p,
+			.popup_three p,
+			.popup_four p,
+			.popup_five p,
+			.popup_six p,
+			.popup_seven p,
+			.popup_eight p,
+			.popup_nine p,
+			.popup_ten p,
+			.popup_eleven p,
+			.popup_twelve p,
+			.popup_thirteen p {
+				display:table-cell;
+				vertical-align:middle;
+				position:relative;
+			}
+
+			#check_one_input:checked ~ .popup_one_parent,
+			#check_two_input:checked ~ .popup_two,
+			#check_three_input:checked ~ .popup_three,
+			#check_four_input:checked ~ .popup_four,
+			#check_five_input:checked ~ .popup_five,
+			#check_six_input:checked ~ .popup_six,
+			#check_seven_input:checked ~ .popup_seven,
+			#check_eight_input:checked ~ .popup_eight,
+			#check_nine_input:checked ~ .popup_nine,
+			#check_ten_input:checked ~ .popup_ten,
+			#check_eleven_input:checked ~ .popup_eleven,
+			#check_twelve_input:checked ~ .popup_twelve,
+			#check_thirteen_input:checked ~ .popup_thirteen,
+			input:checked ~ .mask,
+			#check_one_input_additional:checked ~ .popup_one_additional {
+				display: block;
+			}
+
+			#check_one_input_additional:checked ~ .popup_one {
+				display: none;
+			}
+
+			.item-hover,
+			.item-hover {
+				position:absolute;
+				/* top: 10%;
+				left: 10%; */
+				/* margin: 0 auto; */
+				/* border: solid red; */
+				width: 100%;
+				height: 100%;
+			}
+
+			.mask {
+				display: none;
+				width: 100%;
+				height: 100%;
+				background: black;
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+				filter: alpha(opacity=80);
+				opacity:0.8;
+				position: fixed;
+				text-align: center;
+				bottom: 0;
+				margin: 0 auto;
+				z-index: 98;
+			}
+
+			.item-type-line .item-hover {
+				z-index:100;
+				-webkit-transition: all 300ms ease-out;
+				-moz-transition: all 300ms ease-out;
+				-o-transition: all 300ms ease-out;
+				transition: all 300ms ease-out;
+				opacity:0;
+				cursor:pointer;
+				display:block;
+				text-decoration:none;
+				text-align:center;
+			}
+
+				/* .item-type-line .item-info {
+					z-index:10;
+					color:#ffffff;
+					display:table-cell;
+					vertical-align:middle;
+					position:relative;
+					z-index:5;
+				} */
+
+				.item-type-line .item-info .headline {
+					/* font-size:20px; */
+				}
+
+				.popup_two .col-sm-4 {
+					border: solid red;
+				}
+
+				.item-type-line .item-info .line {
+					 height:1px;
+					 width:0%;
+					 margin:15px auto;
+					 background-color:#ffffff;
+					-webkit-transition: all 500ms ease-out;
+					-moz-transition: all 500ms ease-out;
+					-o-transition: all 500ms ease-out;
+					transition: all 500ms ease-out;
+
+				}
+
+				.item-type-line .item-info .date {
+					/* font-size:12px; */
+				}
+
+				.item-type-line .item-hover .mask {
+					background-color:#000;
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+					filter: alpha(opacity=80);
+					opacity:0.8;
+					z-index:0;
+				}
+
+				.item-type-line .item-hover:visited .line {
+					width:40%;
+				}
+
+				.item-type-line .item-hover:visited {
+					opacity:1;
+				}
+
+			.item-img {
+				/* background-color:red; */
+				/* background-color:#7a548f; */
+				z-index:0;
+			}
