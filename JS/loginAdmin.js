@@ -29,11 +29,6 @@ this.login = function(dbName, dbUser, dbPassword, login, password) {
    $.post('../ajax/loginAdmin.php', {dbName: dbName, dbUser: dbUser,
                                      dbPassword: dbPassword, login: login,
                                      password: password}, function(data) {
-     // // $('div#connection-data').text(data);
-     // if (data == 'Успешный вход') {
-     //   // renderMenuPage();
-     //   alert('Успешный вход');
-     // }
      try {
        loginAdmin.loginSecurityData = JSON.parse(data);
        checkReceivedLoginSecurityData();
@@ -44,7 +39,6 @@ this.login = function(dbName, dbUser, dbPassword, login, password) {
 }
 
 this.checkReceivedLoginSecurityData = function() {
-  // alert(loginAdmin.loginSecurityData[0].attribute;);
   for (var i = 0; i < Object.keys(loginAdmin.loginSecurityData).length; i++) {
     loginAdmin.firstname = loginAdmin.loginSecurityData[i].firstname;
     loginAdmin.middlename = loginAdmin.loginSecurityData[i].middlename;

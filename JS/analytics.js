@@ -35,7 +35,6 @@ this.recieveAnalyticsData = async function(type) {
   }
   analytics.dateStart = $('input#dateStart').val();
   analytics.dateEnd = $('input#dateEnd').val();
-  // alert(receivedAgentStatus);
   if (analyticsAreaTrigger == true && agentStatus.loginSecurityData[0].agentArea == analytics.checkedValue) {
     await $.post('../php/receiveReportData.php', {dbName: localStorage.getItem('dbName'), dbUser: localStorage.getItem('dbUser'),
                                             dbPassword: localStorage.getItem('dbPassword'), dateStart: analytics.dateStart,
@@ -168,12 +167,6 @@ this.createAnalyticsReport = function(analyticsType) {
     </div> \
   ");
   renderAnalyticsTable(analyticsType);
-  // let saveTrigger = false;
-  // for (var i = 0; i < Object.keys(analytics.tmp).length; i++) {
-  //   if (analytics.tmp[i].Quantity > 0 && saveTrigger == false) {
-  //     saveTrigger = true;
-  //   }
-  // }
   if (analyticsType == 'Подробный анализ' || analyticsType == 'Без анализа') {
     $("#tableContainer").append(" \
                                 <br><br> \
@@ -259,9 +252,6 @@ this.renderAnalyticsTable = function(analyticsType) {
   } else {
     for (var i = 0; i < Object.keys(analytics.salesQuantity).length; i++) {
       if (analyticsType == 'Сводный анализ') {
-        // var dTStrSource = analytics.tmp[i].DateTimeDocLocal;
-        // var dt = new Date(dTStrSource);
-        // var dTStrOut = formatDate(dt);
         count += 1;
         tableRow = '<tbody><tr> \
                             <td>' + count + '</td> \
@@ -351,7 +341,7 @@ this.createObject = function(paramOne, paramTwo, paramThree) {
   analytics.tmpQuantity = parseFloat(analytics.tmp[paramThree].Quantity, 10);
   analytics.tmpExchangeQuantity = parseFloat(analytics.tmp[paramThree].ExchangeQuantity, 10);
 
-  //Redefined "Surplus" field and functionality for "differentiate exchange functionality" in order not to make changes to Android app.
+  //Redefined "Surplus" field and functionality to "differentiate exchange functionality" in order not to make changes to Android app.
   analytics.tmpExchangeSpoiled = parseFloat(analytics.tmp[paramThree].Surplus, 10);
 
   if (paramTwo == 0) {

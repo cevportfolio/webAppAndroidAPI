@@ -1,5 +1,4 @@
 $('#home').on('click', function() {
-
   agentStatus.areaStatusSalesSum = [];
   agentStatus.areaStatusInvoicesNumber = [];
   agentStatus.areaStatusLastSyncDateTime = [];
@@ -26,12 +25,8 @@ this.silentLogin = async function(dbName, dbUser, dbPassword, login, password) {
   await $.post('../ajax/loginAdmin.php', {dbName: dbName, dbUser: dbUser,
                                     dbPassword: dbPassword, login: login,
                                     password: password}, function(data) {
-    // $('div#connection-data').text(data);
     try {
       agentStatus.loginSecurityData = JSON.parse(data);
-      // alert($.trim(agentStatus.loginSecurityData[0].attribute));
-      // localStorage.setItem('attribute', agentStatus.loginSecurityData[0].attribute);
-      // alert(localStorage.getItem('attribute'));
       if (agentStatus.loginSecurityData[0].attribute == 'ceo' ||
           agentStatus.loginSecurityData[0].attribute == "admin" ||
           agentStatus.loginSecurityData[0].attribute == "super") {
@@ -278,7 +273,6 @@ this.showAgentStatus = function() {
       } else {
         var devStatus = 0;
       }
-      // devStatus = agentStatus.areaDevelopmentStatus[Object.keys(agentStatus.areaDevelopmentStatus)[i]];
       var statusLine = '<tr> \
                           <td>' + agentStatus.area + Object.keys(agentStatus.areaStatusSalesSum)[i] + '</td> \
                           <td>' + agentStatus.salesTotal + agentStatus.areaStatusSalesSum[Object.keys(agentStatus.areaStatusSalesSum)[i]].toFixed(2) + '</td> \
@@ -289,7 +283,6 @@ this.showAgentStatus = function() {
       $("#agentStatusTableData").append(statusLine);
     }
   } else {
-    // let statusLine = "Добро пожаловать, Агент.";
     $("#agentStatusContainer").append("<H1>Добро пожаловать, Агент.</H1>");
   }
 }

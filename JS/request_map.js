@@ -1,5 +1,5 @@
 var request_mapLocalVars = {
-  "showMap" : "Карта сети Кайман",
+  "showMap" : "Карта сети Магазинов",
   "areaCurrentValue" : 0,
   "chooseAreaLable" : "Выберите район",
   "areaTrigger" : false,
@@ -119,15 +119,6 @@ this.chooseLoadType = function(myRadio) {
   }
 }
 
-// this.scrollTop = function() {
-//
-//   var element = document.getElementById("map");
-//   element.scrollIntoView();
-//   element.scrollIntoView(false);
-//   element.scrollIntoView({block: "end"});
-//   element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-// }
-
 function init() {
 
   $('#toggle').bind({
@@ -148,43 +139,6 @@ function init() {
   });
 }
 
-// async function createPoints() {
-//   if (Object.keys(request_mapLocalVars.salesPartnersList).length > 0){
-//     // alert(Object.keys(request_mapLocalVars.salesPartnersList).length);
-//     request_mapLocalVars.dataJson = {"type": 'FeatureCollection', "features": []};
-//     // for (var i = 0; i < Object.keys(request_mapLocalVars.salesPartnersList).length; i++) {
-//     //
-//     //   if (document.getElementById(request_mapLocalVars.checkLoadTypeRadio[1]).checked == true) {
-//     // request_mapLocalVars.salesPartnersList[i].Адрес, i
-//         await getCoords();
-//         // await new Promise((resolve, reject) => setTimeout(resolve, 3000));
-//       // }
-//       // if (document.getElementById(request_mapLocalVars.checkLoadTypeRadio[1]).checked == false) {
-//       //   request_mapLocalVars.dataJson.features.push({type: "Feature", id: i, geometry: {type: "Point", coordinates:
-//       //   [request_mapLocalVars.salesPartnersList[i].Latitude, request_mapLocalVars.salesPartnersList[i].Longitude]},
-//       //   properties: {balloonContent: "Название: " + request_mapLocalVars.salesPartnersList[i].Наименование + "<br/>Адрес: " +
-//       //     request_mapLocalVars.salesPartnersList[i].Адрес + "<br/>Учет: " +
-//       //   request_mapLocalVars.salesPartnersList[i].Учет + "<br/>Контакты: " + request_mapLocalVars.salesPartnersList[i].Контакты
-//       //   + "<br/>Юридическое Наименование: " + request_mapLocalVars.salesPartnersList[i].Юр_Наименование
-//       //   + "<br/>Маршрут: " + request_mapLocalVars.salesPartnersList[i].DayOfTheWeek
-//       //   + "<br/>Динамика за месяц: " + "<br/>Динамика за все время: " + "<br/>Средний чек: " + "<br/>Поледний чек: "
-//       //   + "<br/>Последнее посещение: ",
-//       //   clusterCaption: request_mapLocalVars.salesPartnersList[i].Наименование,
-//       //   hintContent: request_mapLocalVars.salesPartnersList[i].Наименование, iconCaption: request_mapLocalVars.salesPartnersList[i].Наименование},
-//       //   options: {iconColor: request_mapLocalVars.areaColor[parseInt(request_mapLocalVars.salesPartnersList[i].Район) - 1]}});
-//       //   request_mapLocalVars.myPoints.push({ coords: [request_mapLocalVars.salesPartnersList[i].Latitude, request_mapLocalVars.salesPartnersList[i].Longitude], text: request_mapLocalVars.salesPartnersList[i].Наименование });
-//       // }
-//       // request_mapLocalVars.objGetName[i] = request_mapLocalVars.salesPartnersList[i].Наименование;
-//       // request_mapLocalVars.objGetSPID[i] = request_mapLocalVars.salesPartnersList[i].ID;
-//       // request_mapLocalVars.objGetSPArea[i] = request_mapLocalVars.salesPartnersList[i].Район;
-//       // request_mapLocalVars.objGetSPAddress[i] = request_mapLocalVars.salesPartnersList[i].Адрес;
-//       // request_mapLocalVars.objGetLatitude[i] = request_mapLocalVars.salesPartnersList[i].Latitude;
-//       // request_mapLocalVars.objGetLongitude[i] = request_mapLocalVars.salesPartnersList[i].Longitude;
-//     // }
-//   } else {
-//     alert("выберите район");
-//   }
-// }
 async function createPoints() {
   if (Object.keys(request_mapLocalVars.salesPartnersList).length > 0){
     request_mapLocalVars.dataJson = {"type": 'FeatureCollection', "features": []};
@@ -380,7 +334,6 @@ function sleep(milliseconds) {
 function getСheckUpdateStatus() {
   request_mapLocalVars.checkCoordsUpdateTrigger = document.getElementById("checkCoordsUpdate").checked;
   request_mapLocalVars.checkAddressUpdateTrigger = document.getElementById("checkAddressUpdate").checked;
-  // alert(request_mapLocalVars.checkCoordsUpdateTrigger);
 }
 
 function updateSPCoords(area, latitude, longitude, spID) {
@@ -431,71 +384,6 @@ function getAddress(coords) {
             });
     });
 }
-
-// function getCoords() {
-//   // address, i
-//   for (var i = 0; i < Object.keys(request_mapLocalVars.salesPartnersList).length; i++) {
-//     var address = request_mapLocalVars.salesPartnersList[i].Адрес;
-//     if (document.getElementById(request_mapLocalVars.checkLoadTypeRadio[1]).checked == true) {
-//       if (address != "" && request_mapLocalVars.salesPartnersList[i].addressLoadByPass != 1) {
-//
-//         ymaps.geocode(address).then(function (res) {
-//             var firstGeoObject = res.geoObjects.get(0);
-//             // Координаты геообъекта.
-//             coords = firstGeoObject.geometry.getCoordinates();
-//             request_mapLocalVars.objectByAddressLatitude = String(coords).slice(0, parseInt(String(coords).indexOf(',')));
-//             request_mapLocalVars.objectByAddressLongitude = String(coords).slice(parseInt(String(coords).indexOf(',')) + 1);
-//             request_mapLocalVars.myPoints.push({ coords: [request_mapLocalVars.objectByAddressLatitude, request_mapLocalVars.objectByAddressLongitude], text: request_mapLocalVars.salesPartnersList[i].Наименование });
-//
-//             request_mapLocalVars.dataJson.features.push({
-//               type: "Feature", id: i,
-//               geometry:{
-//                 type: "Point",
-//                 coordinates: [request_mapLocalVars.objectByAddressLatitude, request_mapLocalVars.objectByAddressLongitude]
-//               },
-//               properties: {
-//                 balloonContent:
-//                   "Название: " + request_mapLocalVars.salesPartnersList[i].Наименование +
-//                   "<br/>Адрес: " + request_mapLocalVars.salesPartnersList[i].Адрес +
-//                   "<br/>Учет: " + request_mapLocalVars.salesPartnersList[i].Учет +
-//                   "<br/>Контакты: " + request_mapLocalVars.salesPartnersList[i].Контакты +
-//                   "<br/>Юридическое Наименование: " + request_mapLocalVars.salesPartnersList[i].Юр_Наименование +
-//                   "<br/>Маршрут: " + request_mapLocalVars.salesPartnersList[i].DayOfTheWeek +
-//                   "<br/>Динамика за месяц: " + "<br/>Динамика за все время: " + "<br/>Средний чек: " + "<br/>Поледний чек: " + "<br/>Последнее посещение: ",
-//                 clusterCaption: "Сеть Кайман",
-//                 hintContent: request_mapLocalVars.salesPartnersList[i].Наименование, iconCaption: request_mapLocalVars.salesPartnersList[i].Наименование
-//               },
-//               options: {
-//                 iconColor: request_mapLocalVars.areaColor[parseInt(request_mapLocalVars.salesPartnersList[i].Район) - 1]
-//               }
-//             });
-//         });
-//       }
-//       if (address == "" || request_mapLocalVars.salesPartnersList[i].addressLoadByPass == 1) {
-//
-//         request_mapLocalVars.dataJson.features.push({type: "Feature", id: i, geometry: {type: "Point", coordinates:
-//         [request_mapLocalVars.salesPartnersList[i].Latitude, request_mapLocalVars.salesPartnersList[i].Longitude]},
-//         properties: {balloonContent: "Название: " + request_mapLocalVars.salesPartnersList[i].Наименование + "<br/>Адрес: " +
-//           request_mapLocalVars.salesPartnersList[i].Адрес + "<br/>Учет: " +
-//         request_mapLocalVars.salesPartnersList[i].Учет + "<br/>Контакты: " + request_mapLocalVars.salesPartnersList[i].Контакты
-//         + "<br/>Юридическое Наименование: " + request_mapLocalVars.salesPartnersList[i].Юр_Наименование
-//         + "<br/>Маршрут: " + request_mapLocalVars.salesPartnersList[i].DayOfTheWeek
-//         + "<br/>Динамика за месяц: " + "<br/>Динамика за все время: " + "<br/>Средний чек: " + "<br/>Поледний чек: "
-//         + "<br/>Последнее посещение: ",
-//         clusterCaption: request_mapLocalVars.salesPartnersList[i].Наименование,
-//         hintContent: request_mapLocalVars.salesPartnersList[i].Наименование, iconCaption: request_mapLocalVars.salesPartnersList[i].Наименование},
-//         options: {iconColor: request_mapLocalVars.areaColor[parseInt(request_mapLocalVars.salesPartnersList[i].Район) - 1]}});
-//         request_mapLocalVars.myPoints.push({ coords: [request_mapLocalVars.salesPartnersList[i].Latitude, request_mapLocalVars.salesPartnersList[i].Longitude], text: request_mapLocalVars.salesPartnersList[i].Наименование });
-//       }
-//     }
-//     request_mapLocalVars.objGetName[i] = request_mapLocalVars.salesPartnersList[i].Наименование;
-//     request_mapLocalVars.objGetSPID[i] = request_mapLocalVars.salesPartnersList[i].ID;
-//     request_mapLocalVars.objGetSPArea[i] = request_mapLocalVars.salesPartnersList[i].Район;
-//     request_mapLocalVars.objGetSPAddress[i] = request_mapLocalVars.salesPartnersList[i].Адрес;
-//     request_mapLocalVars.objGetLatitude[i] = request_mapLocalVars.salesPartnersList[i].Latitude;
-//     request_mapLocalVars.objGetLongitude[i] = request_mapLocalVars.salesPartnersList[i].Longitude;
-//   }
-// }
 function getCoords(address, i) {
   if (address != "" && request_mapLocalVars.salesPartnersList[i].addressLoadByPass != 1) {
 
@@ -528,18 +416,6 @@ function getCoords(address, i) {
             iconColor: request_mapLocalVars.areaColor[parseInt(request_mapLocalVars.salesPartnersList[i].Район) - 1]
           }
         });
-        // request_mapLocalVars.dataJson.features.push({type: "Feature", id: i, geometry: {type: "Point", coordinates:
-        // [request_mapLocalVars.objectByAddressLatitude, request_mapLocalVars.objectByAddressLongitude]},
-        // properties: {balloonContent: "Название: " + request_mapLocalVars.salesPartnersList[i].Наименование + "<br/>Адрес: " +
-        //   request_mapLocalVars.salesPartnersList[i].Адрес + "<br/>Учет: " +
-        // request_mapLocalVars.salesPartnersList[i].Учет + "<br/>Контакты: " + request_mapLocalVars.salesPartnersList[i].Контакты
-        // + "<br/>Юридическое Наименование: " + request_mapLocalVars.salesPartnersList[i].Юр_Наименование
-        // + "<br/>Маршрут: " + request_mapLocalVars.salesPartnersList[i].DayOfTheWeek
-        // + "<br/>Динамика за месяц: " + "<br/>Динамика за все время: " + "<br/>Средний чек: " + "<br/>Поледний чек: "
-        // + "<br/>Последнее посещение: ",
-        // clusterCaption: request_mapLocalVars.salesPartnersList[i].Наименование,
-        // hintContent: request_mapLocalVars.salesPartnersList[i].Наименование, iconCaption: request_mapLocalVars.salesPartnersList[i].Наименование},
-        // options: {iconColor: request_mapLocalVars.areaColor[parseInt(request_mapLocalVars.salesPartnersList[i].Район) - 1]}});
     });
   }
   if (address == "" || request_mapLocalVars.salesPartnersList[i].addressLoadByPass == 1) {

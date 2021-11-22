@@ -9,8 +9,8 @@ var localCreateExcel = {
   "wbout" : "",
   "wbxout" : "",
 	"currDate" : formatDate(new Date()),
-	"countLee" : accountingLocalVars.countLee + 1,
-	"countChe" : accountingLocalVars.countChe + 1,
+	"countTwo" : accountingLocalVars.countTwo + 1,
+	"countOne" : accountingLocalVars.countOne + 1,
 	"salesDate" : ""
 };
 
@@ -43,14 +43,14 @@ $("#button-a").click(function(){
    saveAs(new Blob([s2ab(localCreateExcel.wbout)],{type:"application/octet-stream"}), 'отчет_'+ localCreateExcel.currDate +'.xlsx');
 });
 
-$("#saveAccountantChe").click(function(){
-	prepairDataToSave("accountantChe");
-  saveAs(new Blob([s2ab(localCreateExcel.wbxout)],{type:"application/octet-stream"}), accountingLocalVars.checkedValue +'_накладные_Че_за_'+ localCreateExcel.salesDate +'_сформирован_'+ localCreateExcel.currDate +'_'+ localCreateExcel.countChe +'.xlsx');
+$("#saveaccountantOne").click(function(){
+	prepairDataToSave("accountantOne");
+  saveAs(new Blob([s2ab(localCreateExcel.wbxout)],{type:"application/octet-stream"}), accountingLocalVars.checkedValue +'_накладные_Один_за_'+ localCreateExcel.salesDate +'_сформирован_'+ localCreateExcel.currDate +'_'+ localCreateExcel.countOne +'.xlsx');
 });
 
-$("#saveAccountantLee").click(function(){
-	prepairDataToSave("accountantLee");
-	saveAs(new Blob([s2ab(localCreateExcel.wbxout)],{type:"application/octet-stream"}), accountingLocalVars.checkedValue +'_накладные_Ли_за_'+ localCreateExcel.salesDate +'_сформирован_'+ localCreateExcel.currDate +'_'+ localCreateExcel.countLee +'.xlsx');
+$("#saveaccountantTwo").click(function(){
+	prepairDataToSave("accountantTwo");
+	saveAs(new Blob([s2ab(localCreateExcel.wbxout)],{type:"application/octet-stream"}), accountingLocalVars.checkedValue +'_накладные_Два_за_'+ localCreateExcel.salesDate +'_сформирован_'+ localCreateExcel.currDate +'_'+ localCreateExcel.countTwo +'.xlsx');
 });
 
 $("#printReport").click(function(){
@@ -77,11 +77,11 @@ function prepairDataToSave(param) {
 		localCreateExcel.wb.Sheets[localCreateExcel.ws_name] = localCreateExcel.ws;
 		localCreateExcel.wbout = XLSX.write(localCreateExcel.wb, {bookType:'xlsx', bookSST:true, type:'binary'});
 	}
-	if (param == "accountantChe") {
-    alert("Бухгалтерия ИП Че");
+	if (param == "accountantOne") {
+    alert("Бухгалтерия ИП Один");
 		localCreateExcel.wb = XLSX.utils.book_new();
-		localCreateExcel.ws = XLSX.utils.table_to_sheet(document.getElementById('tableDataChe'));
-		localCreateExcel.ws_name = "Продажи Че";
+		localCreateExcel.ws = XLSX.utils.table_to_sheet(document.getElementById('tableDataOne'));
+		localCreateExcel.ws_name = "Продажи Один";
     var wsname = localCreateExcel.ws_name;
     var workbook = localCreateExcel.wb;
     var worksheet = localCreateExcel.ws;
@@ -103,7 +103,7 @@ function prepairDataToSave(param) {
 		worksheet['!cols'] = localCreateExcel.sheetcols;
 		workbook.SheetNames.push(wsname);
 
-    for (var i = 2; i < localCreateExcel.countChe + 1; i++) {
+    for (var i = 2; i < localCreateExcel.countOne + 1; i++) {
       var cellE = 'E' + i;
       var cellM = 'M' + i;
       var valueCell = worksheet[cellE].v;
@@ -113,11 +113,11 @@ function prepairDataToSave(param) {
     workbook.Sheets[wsname] = worksheet;
 		localCreateExcel.wbout = XLSX.write(workbook, {bookType:'xlsx', bookSST:true, type:'binary'});
 	}
-  if (param == "accountantLee") {
-    alert("Бухгалтерия ИП Ли");
+  if (param == "accountantTwo") {
+    alert("Бухгалтерия ИП Два");
 		localCreateExcel.wbx = XLSX.utils.book_new();
-		localCreateExcel.wsx = XLSX.utils.table_to_sheet(document.getElementById('tableDataLee'));
-		localCreateExcel.wsx_name = "Продажи Ли";
+		localCreateExcel.wsx = XLSX.utils.table_to_sheet(document.getElementById('tableDataTwo'));
+		localCreateExcel.wsx_name = "Продажи Два";
     var wsname = localCreateExcel.wsx_name;
     var workbook = localCreateExcel.wbx;
     var worksheet = localCreateExcel.wsx;
@@ -137,7 +137,7 @@ function prepairDataToSave(param) {
 		];
 		worksheet['!cols'] = localCreateExcel.sheetcols;
 		workbook.SheetNames.push(wsname);
-    for (var i = 2; i < localCreateExcel.countLee + 1; i++) {
+    for (var i = 2; i < localCreateExcel.countTwo + 1; i++) {
       var cellE = 'E' + i;
       var cellM = 'M' + i;
       var valueCell = worksheet[cellE].v;
@@ -190,35 +190,12 @@ function convert(){
    var iStart = sum(parseInt(Object.keys(reportsLocalVars.salesQuantity).length, 10), 8);
    var iEnd = sum(parseInt(Object.keys(reportsLocalVars.salesQuantity).length, 10), 19);
 
-   // for (var i = iStart; i < iEnd; i++) {
-   //   var cellA = 'A' + i;
-   //   var cellB = 'B' + i;
-   //   var cellC = 'D' + i;
-   //   var cellD = 'E' + i;
-   //   var cellE = 'F' + i;
-   //   var valueCell = worksheet[cellE].v;
-   //   var strCell = valueCell.toString();
-   //   add_cell_to_sheet(worksheet, cellM, strCell);
-   // }
-
    var cellA = 'A' + sum(parseInt(Object.keys(reportsLocalVars.salesQuantity).length, 10), 5);
    var cellB = 'B' + sum(parseInt(Object.keys(reportsLocalVars.salesQuantity).length, 10), 5);
    var cellC = 'C' + sum(parseInt(Object.keys(reportsLocalVars.salesQuantity).length, 10), 5);
-   // alert(cellC);
    a = a.concat(['']).concat(b);
    a = a.concat(['']).concat(c);
    a = a.concat(['']).concat(d);
-
-   // let worksheet = XLSX.utils.json_to_sheet(a, { skipHeader: true })
-   //
-   // const new_workbook = XLSX.utils.book_new()
-   // XLSX.utils.book_append_sheet(new_workbook, worksheet, "worksheet")
-   // XLSX.writeFile(new_workbook, 'tmp_file.xls')
-
-   // By the way, I have solved this issues by doing {raw=true}, which keep all cell format as like html table.
-   // !!!
-   // var tbl = XLSX.utils.table_to_book(document.getElementById('tableforexcel'), {raw:true});
-   // XLSX.writeFile(tbl, file_name, {cellStyles:true});
 
    localCreateExcel.wb = XLSX.utils.book_new();
    localCreateExcel.ws = XLSX.utils.json_to_sheet(a, { skipHeader: true });

@@ -28,8 +28,6 @@ function renderOptions() {
       </div> \
     </div> \
   ");
-  // let url = "../js/request_map.js";
-  // $.getScript(url);
 }
 
 function chooseSubMenuChangeDBTables(radio) {
@@ -131,7 +129,6 @@ function chooseAreaToChangeSP(radio) {
 }
 
 function populateOptionList() {
-  // changeDBTablesLocalVars.reloadTrigger = false;
   changeDBTablesLocalVars.spGetName = new Object();
   changeDBTablesLocalVars.spGetLegalName = new Object();
   changeDBTablesLocalVars.spGetArea = new Object();
@@ -152,7 +149,6 @@ function populateOptionList() {
   var tmpName;
   var tmpID;
   var areaListLine = new String();
-  // alert(Object.keys(changeDBTablesLocalVars.salesPartnersList).length);
   for (var i = 0; i < Object.keys(changeDBTablesLocalVars.salesPartnersList).length; i++) {
     tmpName = changeDBTablesLocalVars.salesPartnersList[i].Наименование;
     tmpID = changeDBTablesLocalVars.salesPartnersList[i].ID;
@@ -174,9 +170,6 @@ function populateOptionList() {
     changeDBTablesLocalVars.spGetAccSubject[tmpID] = changeDBTablesLocalVars.salesPartnersList[i].accSubject;
     changeDBTablesLocalVars.spGetAccAddress[tmpID] = changeDBTablesLocalVars.salesPartnersList[i].accAddress;
   }
-  // $("#sp-list").blur();
-  // $("#list-of-sps").blur();
-  // $("#chooseSPL").focus();
 }
 
 function getSelectedSPID(){
@@ -309,7 +302,6 @@ this.processChangesToSp = function(trigger, table) {
   let areaTmp = changeDBTablesLocalVars.spGetArea[idTmp];
   const Value = document.querySelector('#' + trigger).value;
   if (Value != table[idTmp]) {
-    // alert(Value + " " + areaTmp + " " + nameTmp + " " + idTmp + " " + trigger + " " + table[idTmp]);
     let toChange;
     toChange = confirm("Заменить " + table[idTmp] + " -- на -- " + Value + "  -- ?");
     if (toChange) {
@@ -319,7 +311,6 @@ this.processChangesToSp = function(trigger, table) {
                                               dbPassword: localStorage.getItem('dbPassword'),
                                               updateType: trigger, spName: nameTmp, spArea: areaTmp, spID: idTmp,
                                               beforeValue: table[idTmp], updateValue: newAddress}, function(data) {
-        // changeDBTablesLocalVars.statusUpdateData = JSON.parse(data);
         let isConfirmed;
         if (data == "success") {
           isConfirmed = confirm("Данные обновлены, перезагрузить страницу?");
@@ -327,7 +318,6 @@ this.processChangesToSp = function(trigger, table) {
           alert("Что-то пошло не так");
         }
         if (isConfirmed) {
-          // location.reload();
           reloadData(trigger);
         }
       })
@@ -362,7 +352,6 @@ this.stepBack = function(trigger) {
       alert("Что-то пошло не так");
     }
     if (isConfirmed) {
-      // location.reload();
       reloadData(trigger);
     }
   })

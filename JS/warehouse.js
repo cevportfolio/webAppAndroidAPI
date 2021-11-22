@@ -1,10 +1,4 @@
-var warehouseLocalVars = {
-  "itemNameLabel" : "Номенклатура"
-};
-
 $('#warehouse').on('click', function() {
-  // alert(1234567890);
-  // renderMenuPageWarehouse();
   toTop("connection-data");
 });
 

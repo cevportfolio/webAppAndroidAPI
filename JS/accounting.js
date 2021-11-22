@@ -1,61 +1,3 @@
-var accountingLocalVars = {
-  "itemName" : "Номенклатура",
-  "itenmPrice" : "Цена",
-  "quantity" : "Кол-во",
-  "invoiceSum" : "Всего",
-  "itemID" : "Артикул",
-  "ID" : "№",
-  "total" : "Сумма",
-  "invoiceID" : "Накладная №",
-  "areaID" : "Район",
-  "salesPartnerName" : "Контрагент(наименование)",
-  "taxPayerID" : "ИНН",
-  "date" : "Дата",
-  "salesPartnerOfficialName" : "Организация",
-  "dateStartLabel" : "Начало периода:",
-  "dateEndLabel" : "Конец периода:",
-  "dateStart" : "",
-  "dateEnd" : "",
-  "dash" : "---",
-  "choosePeriod" : "Выберите период",
-  "chooseArea" : "Выберите район",
-  "checkRadio" : ["checkOne", "checkTwo", "checkThree", "checkFour", "checkFive", "checkSeven"],
-  "checkedValue" : "",
-  "tmp" : new Object(),
-  "spNamesStolichniySales" : new Object(),
-  "stolichniySalesData" : new Object(),
-  "stolichniyItems" : new Object(),
-  "stolichniyQuantity" : new Object(),
-  "stolichniyExchange" : new Object(),
-  "accounting" : "1",
-  "salesListLee" : [],
-  "salesListChe" : [],
-  "listLeeElem" : [],
-  "listCheElem" : [],
-  "accountantSubjectHead" : "Продажи провод за период: ",
-  "accountantSubjectDash" : " --- ",
-  "countChe" : 0,
-  "countLee" : 0,
-  "countCheRoma" : 0,
-  "radioCheckedTrigger" : false,
-  "dateControl" : "",
-  "chooseFileLabel" : "Выберите файл (Столичные)",
-  "spNameStolichniy" : ["Гастроном В-Лазер", "Столичный 41-ый км (ж/д 83Б)", "Столичный №16", "Столичный Дальнее", "Столичный Егорка (1-ый этаж)",
-  "Столичный Калинка (Продукты)", "Столичный Луговое (Продукты)", "Столичный Мегаполис (Продукты)", "Столичный Мозаика", "Столичный Москва",
-  "Столичный Невельск", "Столичный Родной", "Столичный Северный ветер", "Столичный Сити-Молл", "Столичный Славянский базар", "Столичный ТДЦ",
-  "Столичный Холмск 1", "Столичный Холмск 3", "Столичный Час Пик", "Фабрика Вкуса Пограничная", "Столичный Поронайск", "Фабрика Вкуса Макаров"],
-  "tableHeaderRow" : "",
-  "tmpSPName" : "",
-  "tmpSalesQuantity" : "",
-  "sheet" : "",
-  "chooseAccountantSubjectLabel" : "С каким ИП работать?",
-  "checkAccSubjectRadio" : ["checkOne", "checkTwo", "checkThree"],
-  "accSubjectCheckedValue" : "",
-  "chooseAccChe" : "ИП один",
-  "chooseAccLee" : "ИП два",
-  "chooseAccCheRoma" : "ИП три"
-};
-
 if ($('.fileInput').length > 0)	{
   document.getElementById('file-input').addEventListener('change', readFile, false);
 }
@@ -97,21 +39,6 @@ function receiveStolichniySPNames() {
   $.post('../php/receiveStolichniyData.php', {dbName: localStorage.getItem('dbName'), dbUser: localStorage.getItem('dbUser'),
                                           dbPassword: localStorage.getItem('dbPassword')}, function(data) {
     accountingLocalVars.tmp = JSON.parse(data);
-    // for (var i = 0; i < Object.keys(accountingLocalVars.tmp).length; i++) {
-    //   accountingLocalVars.trigger = false;
-    //   if (Object.keys(accountingLocalVars.salesQuantity).length > 0) {
-    //     for (var key in accountingLocalVars.salesQuantity) {
-    //       if (key == accountingLocalVars.tmp[i].Наименование) {
-    //         createObject(0, 1, i, 1);
-    //       }
-    //     }
-    //     if (accountingLocalVars.trigger == false) {
-    //       createObject(0, 0, i, 1);
-    //     }
-    //   } else {
-    //     createObject(0, 0, i, 1);
-    //   }
-    // }
   });
 }
 
@@ -125,16 +52,9 @@ function readFile(e) {
     var workbook = XLSX.read(data, {type: 'array'});
     accountingLocalVars.sheet = workbook.Sheets[workbook.SheetNames[0]]
     var sheet = accountingLocalVars.sheet;
-    // var cellE = 'E' + 11;
-    // var valueCell = sheet[cellE].v;
-    // var strCell = valueCell.toString();
-    // var resultArray = sheet2arr(sheet);
-    // alert(resultArray);
     var itemIDColNum;
     var itemIDRowNum;
     var spNameTrigger = false;
-    // var spNameFirtsInRawColNum;
-    // var spNameFirtsInRawRowNum;
     var range = XLSX.utils.decode_range(sheet['!ref']);
     for (rowNum = range.s.r; rowNum <= range.e.r; rowNum++) {
         for (colNum=range.s.c; colNum<=range.e.c; colNum++) {
@@ -142,21 +62,13 @@ function readFile(e) {
               XLSX.utils.encode_cell({r: rowNum, c: colNum})
            ];
            if (typeof nextCell === 'undefined') {
-              // row.push(void 0);
            } else {
              if (nextCell.w === "Код") {
                itemIDColNum = colNum;
                itemIDRowNumStart = rowNum + 1;
-               // row.push(nextCell.w);
                var tmpCell = sheet[XLSX.utils.encode_cell({r: itemIDRowNumStart, c: itemIDColNum})];
                alert(tmpCell.v);
              }
-             // if (spNameTrigger == false) {
-             // "spNamesStolichiySales" : new Object(),
-             // "stolichniySalesData" : [],
-             // "stolichniyItems" : new Object(),
-             // "stolichniyQuantity" : new Object(),
-             // "stolichniyExchange" : new Object(),
              if (spNameTrigger === false) {
                for (var i = 0; i < accountingLocalVars.spNameStolichniy.length; i++) {
                  if (accountingLocalVars.spNameStolichniy[i] === nextCell.v) {
@@ -165,10 +77,8 @@ function readFile(e) {
                  }
                }
              }
-             // }
            }
         }
-        // result.push(row);
     }
 
   };
@@ -205,11 +115,6 @@ function numToAlpha(num) {
 }
 
 function createObject(paramOne, paramTwo, paramThree, paramFour) {
-  // "spNamesStolichniySales" : new Object(),
-  // "stolichniySalesData" : new Object(),
-  // "stolichniyItems" : new Object(),
-  // "stolichniyQuantity" : new Object(),
-  // "stolichniyExchange" : new Object(),
   let raw = paramThree;
   let column = paramFour;
   accountingLocalVars.tmpSPName = accountingLocalVars.spNameStolichniy[paramOne];
@@ -221,7 +126,6 @@ function createObject(paramOne, paramTwo, paramThree, paramFour) {
     }
   }
   accountingLocalVars.tmpSalesQuantity = accountingLocalVars.sheet[XLSX.utils.encode_cell({r: paramFour, c: paramFive})];
-  // accountingLocalVars.tmpExchange = accountingLocalVars;
 
   Object.defineProperty(accountingLocalVars.spNamesStolichniySales, accountingLocalVars.tmpSPName, {
      value: accountingLocalVars.stolichniySalesData,
@@ -249,7 +153,6 @@ $('#executeChoice').on('click', async function() {
   for (var i = 0; i < 3; i++) {
     if (document.getElementById(accountingLocalVars.checkAccSubjectRadio[i]).checked == true) {
       accountingLocalVars.accSubjectCheckedValue = document.getElementById(accountingLocalVars.checkAccSubjectRadio[i]).value;
-      // alert(accountingLocalVars.accSubjectCheckedValue);
     }
   }
   if (accountingLocalVars.radioCheckedTrigger == false) {
@@ -274,7 +177,6 @@ $('#executeChoice').on('click', async function() {
 
 this.createAccountantTables = function() {
   tableHeaderRowFunc();
-  // alert("Всего строк: " + Object.keys(accountingLocalVars.tmp).length);
   $('div#connection-data').html("");
   $(".accountantContainer").show();
   $('div#connection-data').append(" \
@@ -284,9 +186,9 @@ this.createAccountantTables = function() {
         <img width='30px' style='float:right' src='../images/icons/black-close-icon-3.png' /> \
       </div> \
       <div id='tableContainer'> \
-        <table class='tableDataChe' id='tableDataChe'></table> \
-        <table class='tableDataLee' id='tableDataLee'></table> \
-        <table class='tableDataCheRoma' id='tableDataCheRoma'></table> \
+        <table class='tableDataOne' id='tableDataOne'></table> \
+        <table class='tableDataTwo' id='tableDataTwo'></table> \
+        <table class='tableDataThree' id='tableDataThree'></table> \
       </div> \
     </div> \
   ");
@@ -328,11 +230,11 @@ this.createAccountantTables = function() {
                                 <td><pre>' + String(accountingLocalVars.tmp[i].accAddress) + '</pre></td> \
                               </tr></tbody>';
             if (triggerLee == true) {
-               $("#tableDataLee").html("Продажи на ИП два");
-               $("#tableDataLee").append(tableHeaderRow);
+               $("#tableDataTwo").html("Продажи на ИП два");
+               $("#tableDataTwo").append(tableHeaderRow);
                triggerLee = false;
             }
-            $("#tableDataLee").append(tableRow);
+            $("#tableDataTwo").append(tableRow);
           }
           if (accountingLocalVars.tmp[i].AgentID == 5 || accountingLocalVars.tmp[i].AgentID == 2) {
             if (spID.trim() == 1208 || spID.trim() == 1872) {
@@ -355,11 +257,11 @@ this.createAccountantTables = function() {
                                   <td><pre>' + String(accountingLocalVars.tmp[i].accAddress) + '</pre></td> \
                                 </tr></tbody>';
               if (triggerLee == true) {
-                 $("#tableDataLee").html("Продажи на ИП два");
-                 $("#tableDataLee").append(tableHeaderRow);
+                 $("#tableDataTwo").html("Продажи на ИП два");
+                 $("#tableDataTwo").append(tableHeaderRow);
                  triggerLee = false;
               }
-              $("#tableDataLee").append(tableRow);
+              $("#tableDataTwo").append(tableRow);
             }
           }
         }
@@ -381,11 +283,11 @@ this.createAccountantTables = function() {
         // }
         //
         // if (triggerLee == true) {
-        //    $("#tableDataLee").html("Продажи на ИП два");
-        //    $("#tableDataLee").append(tableHeaderRow);
+        //    $("#tableDataTwo").html("Продажи на ИП два");
+        //    $("#tableDataTwo").append(tableHeaderRow);
         //    triggerLee = false;
         // }
-        // $("#tableDataLee").append(tableRow);
+        // $("#tableDataTwo").append(tableRow);
       }
       if (accountingLocalVars.tmp[i].type === "На три") {
         var dTStrSource = accountingLocalVars.tmp[i].DateTimeDocLocal;
@@ -414,11 +316,11 @@ this.createAccountantTables = function() {
                                 <td><pre>' + String(accountingLocalVars.tmp[i].accAddress) + '</pre></td> \
                               </tr></tbody>';
             if (triggerCheRoma == true) {
-               $("#tableDataCheRoma").html("Продажи на ИП три");
-               $("#tableDataCheRoma").append(tableHeaderRow);
+               $("#tableDataThree").html("Продажи на ИП три");
+               $("#tableDataThree").append(tableHeaderRow);
                triggerCheRoma = false;
             }
-            $("#tableDataCheRoma").append(tableRow);
+            $("#tableDataThree").append(tableRow);
           }
         }
       }
@@ -449,11 +351,11 @@ this.createAccountantTables = function() {
                                 <td><pre>' + String(accountingLocalVars.tmp[i].accAddress) + '</pre></td> \
                               </tr></tbody>';
             if (triggerChe == true) {
-               $("#tableDataChe").html("Продажи на ИП один");
-               $("#tableDataChe").append(tableHeaderRow);
+               $("#tableDataOne").html("Продажи на ИП один");
+               $("#tableDataOne").append(tableHeaderRow);
                triggerChe = false;
             }
-            $("#tableDataChe").append(tableRow);
+            $("#tableDataOne").append(tableRow);
           }
         }
         if (accountingLocalVars.tmp[i].AgentID == 7) {
@@ -476,11 +378,11 @@ this.createAccountantTables = function() {
                               <td><pre>' + String(accountingLocalVars.tmp[i].accAddress) + '</pre></td> \
                             </tr></tbody>';
           if (triggerChe == true) {
-             $("#tableDataChe").html("Продажи на ИП один");
-             $("#tableDataChe").append(tableHeaderRow);
+             $("#tableDataOne").html("Продажи на ИП один");
+             $("#tableDataOne").append(tableHeaderRow);
              triggerChe = false;
           }
-          $("#tableDataChe").append(tableRow);
+          $("#tableDataOne").append(tableRow);
         }
       }
     }
@@ -529,11 +431,11 @@ this.createAccountantTables = function() {
     //   }
     //
     //   if (triggerChe == true) {
-    //      $("#tableDataChe").html("Продажи на ИП один");
-    //      $("#tableDataChe").append(tableHeaderRow);
+    //      $("#tableDataOne").html("Продажи на ИП один");
+    //      $("#tableDataOne").append(tableHeaderRow);
     //      triggerChe = false;
     //   }
-    //   $("#tableDataChe").append(tableRow);
+    //   $("#tableDataOne").append(tableRow);
     // }
   }
   var saveTriggerLee = false;
@@ -640,7 +542,6 @@ this.renderAccountingOptions = function() {
       </div> \
     </div> \
   ");
-  // <script src='../js/accounting.js' type='text/javascript' ></script> \
   let url = "../js/accounting.js";
   $.getScript(url);
   if (accountingLocalVars.dateStart != "" && accountingLocalVars.dateEnd != "") {
@@ -650,4 +551,3 @@ this.renderAccountingOptions = function() {
   $(".loginContainer").html("");
   $(".loginContainer").hide();
 }
-//testing github issue
